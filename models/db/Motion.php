@@ -1200,6 +1200,10 @@ class Motion extends IMotion implements IRSSItem
      */
     public function publishAsync()
     {
-        SwooleClient::publishObject(\app\async\models\Motion::createFromDbObject($this));
+        if ($this->isVisibleForAdmins()) {
+            SwooleClient::publishObject(\app\async\models\Motion::createFromDbObject($this));
+        } else {
+            SwooleClient::deleteObject($this->consultationId, 'motions', $this->id);
+        }
     }
 }

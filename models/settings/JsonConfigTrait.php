@@ -7,12 +7,16 @@ use app\models\exceptions\FormError;
 trait JsonConfigTrait
 {
     /**
-     * @param string|null $data
+     * @param string|array|null $data
      * @throws \Exception
      */
     public function __construct($data)
     {
-        $this->setPropertiesFromJSON($data);
+        if (is_array($data)) {
+            $this->setPropertiesFromArray($data);
+        } elseif (is_string($data)) {
+            $this->setPropertiesFromJSON($data);
+        }
     }
 
     /**
@@ -31,6 +35,15 @@ trait JsonConfigTrait
             throw new \Exception('Invalid JSON string: ' . $data);
         }
 
+        $this->setPropertiesFromArray($dataArr);
+    }
+
+    /**
+     * @param array $dataArr
+     * @throws \Exception
+     */
+    protected function setPropertiesFromArray($dataArr)
+    {
         foreach ($dataArr as $key => $val) {
             if (property_exists($this, $key)) {
                 $this->$key = $val;
