@@ -1,0 +1,11 @@
+name: test
+on: [push]
+
+jobs:
+  misspellcheck:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run misspell with reviewdog
+        uses: reviewdog/action-misspell@v1
+        #with:
