@@ -5,6 +5,7 @@ const gulp = require('gulp'),
     ts = require('gulp-typescript'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano'),
     tsProject = ts.createProject('tsconfig.json'),
     sourcemaps = require('gulp-sourcemaps'),
 
@@ -98,7 +99,7 @@ function taskBuildCss() {
     return gulp.src("web/css/*.scss")
         .pipe(sourcemaps.init())
         .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('web/css/'));
 }
@@ -107,7 +108,7 @@ function taskBuildPluginCss() {
     return gulp.src("plugins/**/*.scss")
         .pipe(sourcemaps.init())
         .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('plugins/'));
 }
