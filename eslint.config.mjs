@@ -19,6 +19,7 @@ const config = tseslint.config(
         rules: {
             'no-console': 'off',
             'no-debugger': 'off',
+            '@typescript-eslint/no-deprecated': 'warn',
             '@typescript-eslint/no-explicit-any': 'off',
             '@typescript-eslint/no-inferrable-types': 'off',
             '@typescript-eslint/no-this-alias': 'off',
