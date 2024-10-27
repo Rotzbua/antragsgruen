@@ -31,7 +31,7 @@
     "firebase/php-jwt": "^6.8",
     "guzzlehttp/guzzle": "^7.7",
     "paragonie/sodium_compat": "^2.0",
-    "phpoffice/phpspreadsheet": "^2.0",
+    "phpoffice/phpspreadsheet": "^3.3",
     "predis/predis": "^2.2",
     "s1syphos/php-simple-captcha": "^2.3",
     "scssphp/scssphp": "^1.11",
