@@ -65,7 +65,7 @@ class MotionSectionMappingTest extends DBTestBase
         ]);
 
         $mapping = MotionDeepCopy::getMotionSectionMapping($fromType, $toType, []);
-        $this->assertSame(null, $mapping);
+        $this->assertNull($mapping);
     }
 
     public function testMappingToIncompatibleTypeDoesNotWork2(): void
@@ -87,7 +87,7 @@ class MotionSectionMappingTest extends DBTestBase
         ]);
 
         $mapping = MotionDeepCopy::getMotionSectionMapping($fromType, $toType, []);
-        $this->assertSame(null, $mapping);
+        $this->assertNull($mapping);
     }
 
     public function testMappingOnlyAmendableWorks(): void

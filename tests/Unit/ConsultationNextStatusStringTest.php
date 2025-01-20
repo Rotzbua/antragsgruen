@@ -13,7 +13,7 @@ use Tests\Support\Helper\DBTestBase;
 #[Group('database')]
 class ConsultationNextStatusStringTest extends DBTestBase
 {
-    public function testMotionPrefix_NoMotionExiists(): void
+    public function testMotionPrefixNoMotionExiists(): void
     {
         /** @var Consultation $consultation */
         $consultation = Consultation::findOne(2);
@@ -21,7 +21,7 @@ class ConsultationNextStatusStringTest extends DBTestBase
         $this->assertEquals('A1', $consultation->getNextMotionPrefix(3, []));
     }
 
-    public function testMotionPrefix_A1_exists(): void
+    public function testMotionPrefixA1Exists(): void
     {
         /** @var Consultation $consultation */
         $consultation = Consultation::findOne(2);
@@ -41,7 +41,7 @@ class ConsultationNextStatusStringTest extends DBTestBase
         $this->assertEquals('A2', $consultation->getNextMotionPrefix(3, []));
     }
 
-    public function testMotionPrefix_B1_exists(): void
+    public function testMotionPrefixB1Exists(): void
     {
         /** @var Consultation $consultation */
         $consultation = Consultation::findOne(2);
@@ -61,7 +61,7 @@ class ConsultationNextStatusStringTest extends DBTestBase
         $this->assertEquals('B2', $consultation->getNextMotionPrefix(4, []));
     }
 
-    public function testMotionPrefix_A4_exists(): void
+    public function testMotionPrefixA4Exists(): void
     {
         /** @var Consultation $consultation */
         $consultation = Consultation::findOne(2);
@@ -81,7 +81,7 @@ class ConsultationNextStatusStringTest extends DBTestBase
         $this->assertEquals('A5', $consultation->getNextMotionPrefix(3, []));
     }
 
-    public function testMotionPrefix_TagOverridesPrefix(): void
+    public function testMotionPrefixTagOverridesPrefix(): void
     {
         /** @var Consultation $consultation */
         $consultation = Consultation::findOne(2);

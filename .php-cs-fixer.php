@@ -11,6 +11,12 @@ $rules  = [
 //    '@PHP81Migration'       => true, // Must be the same as the min PHP version.
 //    '@PHP80Migration:risky' => true,
 'modernize_strpos'                       => true,
+'php_unit_attributes'                    => true,
+'php_unit_construct'                     => true,
+'php_unit_method_casing'                 => true,
+'php_unit_assert_new_names'              => true,
+'php_unit_dedicate_assert'               => true,
+'php_unit_dedicate_assert_internal_type' => true,
 'php_unit_set_up_tear_down_visibility'   => true,
 
 ];

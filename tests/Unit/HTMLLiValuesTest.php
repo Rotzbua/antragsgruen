@@ -7,7 +7,7 @@ use Tests\Support\Helper\TestBase;
 
 class HTMLLiValuesTest extends TestBase
 {
-    public function testExplicitlySetLiValues_testExample1(): void
+    public function testExplicitlySetLiValuesTestExample1(): void
     {
         $orig = '<ol><li>Item 1</li><li value="3">Item 2</li><li>Item 3</li></ol>';
         $expect = '<ol><li value="1">Item 1</li><li value="3">Item 2</li><li value="4">Item 3</li></ol>';
@@ -16,7 +16,7 @@ class HTMLLiValuesTest extends TestBase
         $this->assertEquals($expect, $out);
     }
 
-    public function testExplicitlySetLiValues_testExample2(): void
+    public function testExplicitlySetLiValuesTestExample2(): void
     {
         $orig = '<div><ol class="deleted" start="4">
 <li>Test 2
@@ -47,7 +47,7 @@ class HTMLLiValuesTest extends TestBase
         $this->assertEquals($expect, $out);
     }
 
-    public function testGetLiValue_alphabetic1(): void
+    public function testGetLiValueAlphabetic1(): void
     {
         $this->assertSame('A', HTMLTools::getLiValue(1, null, HTMLTools::OL_UPPER_ALPHA));
         $this->assertSame('Z', HTMLTools::getLiValue(26, null, HTMLTools::OL_UPPER_ALPHA));
@@ -55,7 +55,7 @@ class HTMLLiValuesTest extends TestBase
         $this->assertSame('BA', HTMLTools::getLiValue(53, null, HTMLTools::OL_UPPER_ALPHA));
     }
 
-    public function testGetLiValue_alphabetic2(): void
+    public function testGetLiValueAlphabetic2(): void
     {
         $this->assertSame('a', HTMLTools::getLiValue(1, null, HTMLTools::OL_LOWER_ALPHA));
         $this->assertSame('z', HTMLTools::getLiValue(26, null, HTMLTools::OL_LOWER_ALPHA));

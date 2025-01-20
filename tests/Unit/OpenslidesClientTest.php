@@ -43,7 +43,7 @@ class OpenslidesClientTest extends TestBase
         return $this->osApiHistory[$no]['request'];
     }
 
-    public function testLoginResponse_Success(): void
+    public function testLoginResponseSuccess(): void
     {
         $client = $this->getClient();
 

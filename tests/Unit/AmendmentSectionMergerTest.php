@@ -163,7 +163,7 @@ Möglichkeit bieten, Grundrechte zu stärken, nicht diese Fähigkeit in den Vert
         ], $merger->getGroupedParagraphData(0));
     }
 
-    public function testMergeWithComplication1_WithCollisionMerging(): void
+    public function testMergeWithComplication1WithCollisionMerging(): void
     {
         $origText = '<p>Woibbadinga damischa owe gwihss Sauwedda ded Charivari dei heid gfoids ma sagrisch guad. Maßkruag wo hi mim Radl foahn Landla Leonhardifahrt, Radler. Ohrwaschl und glei wirds no fui lustiga Spotzerl Fünferl, so auf gehds beim Schichtl do legst di nieda ned Biawambn Breihaus. I mechad dee Schwoanshaxn ghupft wia gsprunga measi gschmeidig hawadere midananda vui huift vui Biawambn, des wiad a Mordsgaudi is. Biaschlegl soi oans, zwoa, gsuffa Oachkatzlschwoaf hod Wiesn.</p>';
 
@@ -197,7 +197,7 @@ Möglichkeit bieten, Grundrechte zu stärken, nicht diese Fähigkeit in den Vert
         $this->assertFalse(isset($colliding[3]));
     }
 
-    public function testMergeWithComplication1_WithoutCollisionMerging(): void
+    public function testMergeWithComplication1WithoutCollisionMerging(): void
     {
         $origText = '<p>Woibbadinga damischa owe gwihss Sauwedda ded Charivari dei heid gfoids ma sagrisch guad. Maßkruag wo hi mim Radl foahn Landla Leonhardifahrt, Radler. Ohrwaschl und glei wirds no fui lustiga Spotzerl Fünferl, so auf gehds beim Schichtl do legst di nieda ned Biawambn Breihaus. I mechad dee Schwoanshaxn ghupft wia gsprunga measi gschmeidig hawadere midananda vui huift vui Biawambn, des wiad a Mordsgaudi is. Biaschlegl soi oans, zwoa, gsuffa Oachkatzlschwoaf hod Wiesn.</p>';
 
@@ -235,7 +235,7 @@ Möglichkeit bieten, Grundrechte zu stärken, nicht diese Fähigkeit in den Vert
     /**
      * Hint, Does not collide anymore, since 3.7
      */
-    public function testMergeWithComplication2_WithoutCollisionMerging(): void
+    public function testMergeWithComplication2WithoutCollisionMerging(): void
     {
         $origText = '<p>test1 test3 test5 test7 test9 test11 test13 test15 test17 test19 test21 test23 test25</p>';
 
@@ -269,7 +269,7 @@ Möglichkeit bieten, Grundrechte zu stärken, nicht diese Fähigkeit in den Vert
     /**
      * Hint, Does not collide anymore, since 3.7
      */
-    public function testMergeWithComplication2_WithCollisionMerging(): void
+    public function testMergeWithComplication2WithCollisionMerging(): void
     {
         $origText = '<p>test1 test3 test5 test7 test9 test11 test13 test15 test17 test19 test21 test23 test25</p>';
 
@@ -425,7 +425,7 @@ Möglichkeit bieten, Grundrechte zu stärken, nicht diese Fähigkeit in den Vert
         $this->assertCount(0, $collisions);
     }
 
-    public function testCollisionWithTwoDeletedParts_WithCollisionMerging(): void
+    public function testCollisionWithTwoDeletedPartsWithCollisionMerging(): void
     {
         // This tests that partially overlapping deletions CAN be merged
         $origText = '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>';
@@ -448,7 +448,7 @@ Möglichkeit bieten, Grundrechte zu stärken, nicht diese Fähigkeit in den Vert
         $this->assertCount(0, $collisions);
     }
 
-    public function testCollisionWithTwoDeletedParts_WithoutCollisionMerging(): void
+    public function testCollisionWithTwoDeletedPartsWithoutCollisionMerging(): void
     {
         $origText = '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>';
         $paragraphs = HTMLTools::sectionSimpleHTML($origText);
@@ -472,7 +472,7 @@ Möglichkeit bieten, Grundrechte zu stärken, nicht diese Fähigkeit in den Vert
         $this->assertSame('###DEL_START###consetetur sadipscing elitr, sed diam nonumy eirmod ###DEL_END###', $collisions[1][1]->text);
     }
 
-    public function testCollisionTooBigToBeMerged_WithCollisionMerging(): void
+    public function testCollisionTooBigToBeMergedWithCollisionMerging(): void
     {
         // This tests that a collision can NOT be merged when it is too long
         $origText = '<p>test1 test3 test5 test7 test9 test11 test13 test15 test17 test19 test21 test23 test25 test27 test29 test31 test33 test33 test35 test37 test39</p>';
@@ -500,7 +500,7 @@ Möglichkeit bieten, Grundrechte zu stärken, nicht diese Fähigkeit in den Vert
         $this->assertSame('###DEL_START###test23###DEL_END######INS_START###Here we are inserting a rather long text. As this exceeds the limit set in ParagraphMerger::$collisionMergingLimit, this should lead to a collisiontest23###INS_END### ', $colliding[2][1]->text);
     }
 
-    public function testCollisionTooHtmlishToBeMerged_WithCollisionMerging(): void
+    public function testCollisionTooHtmlishToBeMergedWithCollisionMerging(): void
     {
         // This tests that a collision can NOT be merged when it contains HTML tags
         $origText = '<p>test1 test3 test5 test7 test9 test11 test13 test15 test17 test19 test21 test23 test25 test27 test29 test31 test33 test33 test35 test37 test39</p>';
@@ -526,7 +526,7 @@ Möglichkeit bieten, Grundrechte zu stärken, nicht diese Fähigkeit in den Vert
         $this->assertSame('###DEL_START###test23 ###DEL_END######INS_START###<strong>Replacement no. 2</strong> ###INS_END###', $colliding[2][1]->text);
     }
 
-    public function testCollisionSeveralConfusingCollisions_WithCollisionMerging(): void
+    public function testCollisionSeveralConfusingCollisionsWithCollisionMerging(): void
     {
         $origText = '<p>test1 test3 test5 test7 test9 test11 test13 test15 test17 test19 test21 test23 test25 test27 test29 test31 test33 test33 test35 test37 test39</p>';
 

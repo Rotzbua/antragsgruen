@@ -13,7 +13,7 @@ use Tests\Support\Helper\DBTestBase;
 #[Group('database')]
 class AdminMotionFilterFormTest extends DBTestBase
 {
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
