@@ -7,6 +7,15 @@
     "issues": "https://github.com/CatoTH/antragsgruen/issues",
     "source": "https://github.com/CatoTH/antragsgruen"
   },
+  "scripts": {
+    "fix:syntax": "./vendor/bin/php-cs-fixer fix . --using-cache=no",
+    "fix:syntax_tests": "./vendor/bin/php-cs-fixer fix ./tests --using-cache=no",
+    "test:unit": "./vendor/bin/phpunit",
+    "test:unit_offline": "./vendor/bin/phpunit --exclude-group=online",
+    "test:typing": "./vendor/bin/phpstan analyse",
+    "test:syntax": "./vendor/bin/php-cs-fixer fix ./src --dry-run --stop-on-violation --using-cache=no",
+    "test:syntax_tests": "./vendor/bin/php-cs-fixer fix ./tests --dry-run --stop-on-violation --using-cache=no"
+  },
   "keywords": [
     "motions",
     "amendments",
@@ -53,6 +62,7 @@
     "yiisoft/yii2-redis": "^2.0"
   },
   "require-dev": {
+    "friendsofphp/php-cs-fixer": "^v3.48.0",
     "codeception/codeception": "^5.0.10",
     "codeception/module-asserts": "^3.0.0",
     "codeception/module-phpbrowser": "^3.0.0",
