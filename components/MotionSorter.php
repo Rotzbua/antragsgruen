@@ -64,7 +64,7 @@ class MotionSorter
         $prefix2 = preg_replace('/neu$/siu', 'neu1', $prefix2);
         $prefix1 = preg_replace('/new$/siu', 'new1', $prefix1);
         $prefix2 = preg_replace('/new/siu', 'new1', $prefix2);
-        list($prefix1, $prefix2) = static::stripCommonBeginning($prefix1, $prefix2);
+        [$prefix1, $prefix2] = static::stripCommonBeginning($prefix1, $prefix2);
 
         $pat1 = '/^(?<str1>[^0-9]*)(?<num1>[0-9]*)/siu';
         $pat2 = '/^(?<str1>[^0-9]*)(?<num1>[0-9]+)(?<str2>[^0-9]+)(?<num2>[0-9]+)$/siu';

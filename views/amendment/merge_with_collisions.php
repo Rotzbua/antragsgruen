@@ -66,7 +66,7 @@ echo Html::beginForm('', 'post', ['id' => 'amendmentMergeForm']);
 echo $this->render('_merge_step1', [
     'amendment'           => $amendment,
     'otherAmendments'     => $otherAmendments,
-    'allowStatusChanging' => $allowStatusChanging
+    'allowStatusChanging' => $allowStatusChanging,
 ]);
 echo $this->render('_merge_step2', [
     'amendment'           => $amendment,

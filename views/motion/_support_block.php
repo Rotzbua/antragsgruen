@@ -18,7 +18,7 @@ $settings      = $supportType->getSettingsObj();
 echo Html::beginForm('', 'post', [
     'class'                    => 'motionSupportForm',
     'data-antragsgruen-widget' => 'frontend/MotionSupportBlock',
-    'data-settings'            => json_encode($settings)
+    'data-settings'            => json_encode($settings),
 ]);
 
 ?>

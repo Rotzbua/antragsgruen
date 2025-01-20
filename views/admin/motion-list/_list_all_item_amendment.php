@@ -148,7 +148,7 @@ if ($colAction) {
             $link = Html::encode(UrlHelper::createUrl([
                 'amendment/create',
                 'motionSlug' => $entry->getMyMotion()->getMotionSlug(),
-                'cloneFrom' => $entry->id
+                'cloneFrom' => $entry->id,
             ]));
             echo '<li><a tabindex="-1" href="' . $link . '" class="asTemplate">' . $name . '</a>';
         }

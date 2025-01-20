@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return  [
   'index_export_oslides_users' => 'Teilnehmer:innen',
   'index_site_access' => 'Login / Benutzer:innen / Admins',
   'index_site_config' => 'Konfiguration der Antragsrot-Installation',
@@ -91,4 +91,4 @@ Liebe Grüße,
   'users_head' => 'Registrierte Benutzer:innen',
   'users_bc' => 'Benutzer:innen',
   'php_version_hint_text' => 'Auf diesem Server läuft noch PHP in der veralteten Version %CURR%. Zukünftige Versionen von Antragsrot sind damit nicht mehr kompatibel. Bitte aktualisiere bald.',
-);
+];

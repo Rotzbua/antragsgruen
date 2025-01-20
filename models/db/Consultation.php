@@ -715,7 +715,7 @@ class Consultation extends ActiveRecord
         }
         return [
             'image/png',
-            file_get_contents(\Yii::$app->basePath . '/web/img/logo.png')
+            file_get_contents(\Yii::$app->basePath . '/web/img/logo.png'),
         ];
     }
 

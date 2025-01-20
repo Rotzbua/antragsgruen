@@ -26,7 +26,7 @@ class CleanTranslationStringsTest extends DBTestBase
     public function testUnchangingTranslationStrings(): void
     {
         $skipIds = [
-            'motion_type_templ_progressh' // aria-hidden
+            'motion_type_templ_progressh', // aria-hidden
         ];
 
         $changedStrings = [];

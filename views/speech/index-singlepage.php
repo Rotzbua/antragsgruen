@@ -41,7 +41,7 @@ if ($queue->motionId && $queue->motion) {
 if (User::getCurrentUser()) {
     $fullscreenInitData = json_encode([
         'consultation_url' => UrlHelper::createUrl(['/consultation/rest']),
-        'init_page' => 'speech'
+        'init_page' => 'speech',
     ]);
     $fullscreenButton = '<button type="button" title="' . Yii::t('motion', 'fullscreen') . '" class="btn btn-link btnFullscreen"
         data-antragsgruen-widget="frontend/FullscreenToggle" data-vue-element="fullscreen-projector" data-vue-initdata="' . Html::encode($fullscreenInitData) . '">

@@ -32,7 +32,7 @@ class IndexController extends AdminBase
 
         return new HtmlResponse($this->render('index', [
             'site'         => $this->site,
-            'consultation' => $this->consultation
+            'consultation' => $this->consultation,
         ]));
     }
 

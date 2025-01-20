@@ -18,10 +18,10 @@ use yii\helpers\Html;
                 <span class="description"></span>
                 <span class="input">
                     <?= Html::radio(
-                        'SiteCreateForm[amendInitiatedBy]',
-                        $model->amendmentsInitiatedBy == SiteCreateForm::MOTION_INITIATED_ADMINS,
-                        ['value' => SiteCreateForm::MOTION_INITIATED_ADMINS]
-                    ); ?>
+    'SiteCreateForm[amendInitiatedBy]',
+    $model->amendmentsInitiatedBy == SiteCreateForm::MOTION_INITIATED_ADMINS,
+    ['value' => SiteCreateForm::MOTION_INITIATED_ADMINS]
+); ?>
                 </span>
             </label>
             <label class="radio-checkbox-label radio-label two-lines value-2">

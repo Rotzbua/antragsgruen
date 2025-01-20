@@ -35,10 +35,10 @@ $layout->addBreadcrumb(Yii::t('amend', 'merge1_title'));
 
         <div style="text-align: center; margin-top: 20px;"><?php
             echo Html::a(
-                Yii::t('amend', 'merge1_done_goto'),
-                UrlHelper::createMotionUrl($newMotion),
-                ['class' => 'btn btn-primary']
-            );
+    Yii::t('amend', 'merge1_done_goto'),
+    UrlHelper::createMotionUrl($newMotion),
+    ['class' => 'btn btn-primary']
+);
             ?>
         </div>
     </div>

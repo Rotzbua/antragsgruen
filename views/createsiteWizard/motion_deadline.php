@@ -21,10 +21,10 @@ $date   = Tools::date2bootstraptime($model->motionDeadline);
                 <span class="description"></span>
                 <span class="input">
                     <?= Html::radio(
-                        'SiteCreateForm[motionsDeadlineExists]',
-                        $model->motionDeadline === null,
-                        ['value' => 0]
-                    ); ?>
+    'SiteCreateForm[motionsDeadlineExists]',
+    $model->motionDeadline === null,
+    ['value' => 0]
+); ?>
                 </span>
             </label>
             <label class="radio-checkbox-label radio-label date-label broad value-1">

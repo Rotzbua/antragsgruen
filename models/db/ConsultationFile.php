@@ -70,7 +70,7 @@ class ConsultationFile extends ActiveRecord
         return [
             [['siteId', 'filename', 'filesize', 'mimetype', 'data', 'dataHash', 'dateCreation'], 'required'],
             [['mimetype', 'width', 'height', 'downloadPosition', 'title'], 'safe'],
-            [['id', 'consultationId', 'uploadedById', 'downloadPosition', 'siteId', 'filesize', 'width', 'height'], 'number']
+            [['id', 'consultationId', 'uploadedById', 'downloadPosition', 'siteId', 'filesize', 'width', 'height'], 'number'],
         ];
     }
 

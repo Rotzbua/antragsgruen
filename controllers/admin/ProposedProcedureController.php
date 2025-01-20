@@ -13,7 +13,7 @@ use app\models\proposedProcedure\Factory;
 class ProposedProcedureController extends AdminBase
 {
     public const REQUIRED_PRIVILEGES = [
-        Privileges::PRIVILEGE_CHANGE_PROPOSALS
+        Privileges::PRIVILEGE_CHANGE_PROPOSALS,
     ];
 
     public function actionIndex(int $agendaItemId = 0, ?int $expandId = null, ?int $tagId = null): HtmlResponse
@@ -179,7 +179,7 @@ class ProposedProcedureController extends AdminBase
         }
 
         return new JsonResponse([
-            'success' => true
+            'success' => true,
         ]);
     }
 
@@ -203,7 +203,7 @@ class ProposedProcedureController extends AdminBase
         }
 
         return new JsonResponse([
-            'success' => true
+            'success' => true,
         ]);
     }
 
@@ -246,7 +246,7 @@ class ProposedProcedureController extends AdminBase
         }
 
         return new JsonResponse([
-            'success' => true
+            'success' => true,
         ]);
     }
 
@@ -267,7 +267,7 @@ class ProposedProcedureController extends AdminBase
         }
 
         return new JsonResponse([
-            'success' => true
+            'success' => true,
         ]);
     }
 }

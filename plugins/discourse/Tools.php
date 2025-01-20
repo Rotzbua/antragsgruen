@@ -34,7 +34,7 @@ class Tools
             \GuzzleHttp\RequestOptions::JSON => [
                 "title" => $title,
                 "raw" => $body,
-                "category" => $categoryId
+                "category" => $categoryId,
             ],
             \GuzzleHttp\RequestOptions::HEADERS => [
                 'Api-key' => $config['key'],
@@ -109,7 +109,7 @@ class Tools
         $categoryId = static::getDiscourseCategory($amendment->getMyConsultation());
         $title = str_replace(['%TITLE%', '%LINE%'], [
             $amendment->getMyMotion()->getFormattedTitlePrefix(),
-            $amendment->getFirstDiffLine()
+            $amendment->getFirstDiffLine(),
         ], \Yii::t('discourse', 'title_amend'));
 
         $title .= ' [' . static::getRandomCharacters(3) . ']';

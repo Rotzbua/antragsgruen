@@ -41,7 +41,8 @@ class Module extends ModuleBase
     public static function getConsultationExtraSettingsForm(Consultation $consultation): string
     {
         return RequestContext::getController()->renderPartial(
-            '@app/plugins/openslides/views/admin/consultation_settings', ['consultation' => $consultation]
+            '@app/plugins/openslides/views/admin/consultation_settings',
+            ['consultation' => $consultation]
         );
     }
 

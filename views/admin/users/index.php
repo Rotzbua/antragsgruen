@@ -61,7 +61,7 @@ $nonMotionPrivileges = array_values(array_map(fn (Privilege $priv): array => [
 $motionPrivileges = array_values(array_map(fn (Privilege $priv): array => [
     'id' => $priv->id,
     'title' => $priv->name,
-] , $privileges->getMotionPrivileges()));
+], $privileges->getMotionPrivileges()));
 $agendaItems = array_map(fn (\app\models\db\ConsultationAgendaItem $item): array => [
     'id' => $item->id,
     'title' => $item->title,

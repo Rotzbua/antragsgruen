@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return  [
   'initiator' => 'Antragsteller:in',
   'initiators_title' => 'Antragsteller:innen',
   'supporter' => 'Unterstützer:in',
@@ -44,4 +44,4 @@ Link: %LINK%',
   'proposal_email_other' => 'Hallo %NAME_GIVEN%,\\n\\ndie Sitzungsleitung einen Verfahrensvorschlag für deinen Änderungsantrag erarbeitet.\\n\\nBitte überprüfe unter folgendem Link, ob du damit einverstanden bist:\\n%LINK%\\n\\nHinweis: wenn du den eben genannten Link weiterleitest, kann die empfangende Person den Vorschlag damit ebenfalls einsehen und ggf. bestätigen.\\n\\nMit freundlichen Grüßen,\\n  Dein Landesvorstand',
   'proposal_user_disagree_h' => 'Wenn du dem Verfahrensvorschlag nicht zustimmst, wende dich bitte umgehend an die Sitzungsleitung.',
   'proposal_user_change_reset' => 'Da sich der Verfahrensvorschlag geändert hat, wurde die Entscheidung der Antragsteller:in zurückgesetzt.',
-);
+];

@@ -70,7 +70,7 @@ final class AnswerTemplates
     private static function getCollectionPresent(): array
     {
         return [
-            self::getPresent()
+            self::getPresent(),
         ];
     }
 

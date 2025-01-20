@@ -88,7 +88,7 @@ class VotingTest extends DBTestBase
                     'itemId' => $itemId,
                     'vote' => $vote,
                     'public' => $votingBlock->votesPublic,
-                ]
+                ],
             ],
         ]);
         $user = User::findOne(['email' => $userEmail]);

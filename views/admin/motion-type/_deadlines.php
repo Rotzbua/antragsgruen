@@ -22,11 +22,11 @@ $simpleDeadlineAmendments = Tools::dateSql2bootstraptime($deadlineForm->getSimpl
 
 <div>
     <?= HTMLTools::labeledCheckbox(
-        'deadlines[formtypeComplex]',
-        Yii::t('admin', 'motion_deadline_complex'),
-        !$deadlineForm->isSimpleConfiguration(),
-        'deadlineFormTypeComplex'
-    ) ?>
+    'deadlines[formtypeComplex]',
+    Yii::t('admin', 'motion_deadline_complex'),
+    !$deadlineForm->isSimpleConfiguration(),
+    'deadlineFormTypeComplex'
+) ?>
 </div>
 
 <div class="stdTwoCols deadlineTypeSimple hideForAmendmentsOnly">
@@ -138,11 +138,11 @@ $type = ConsultationMotionType::DEADLINE_COMMENTS;
 
 <div class="deadlineTypeComplex">
     <?= HTMLTools::labeledCheckbox(
-        'activateDeadlineDebugMode',
-        Yii::t('admin', 'motion_deadline_debug'),
-        DateTools::isDeadlineDebugModeActive($motionType->getConsultation()),
-        'deadlineDebugMode'
-    ) ?>
+            'activateDeadlineDebugMode',
+            Yii::t('admin', 'motion_deadline_debug'),
+            DateTools::isDeadlineDebugModeActive($motionType->getConsultation()),
+            'deadlineDebugMode'
+        ) ?>
 </div>
 
 </div>

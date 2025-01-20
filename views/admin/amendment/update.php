@@ -38,7 +38,7 @@ $html     .= '<span class="fontello fontello-globe" aria-hidden="true"></span>' 
 $cloneUrl = Html::encode(UrlHelper::createUrl([
     'amendment/create',
     'motionSlug' => $amendment->getMyMotion()->getMotionSlug(),
-    'cloneFrom'  => $amendment->id
+    'cloneFrom'  => $amendment->id,
 ]));
 $html     .= '<li><a href="' . $cloneUrl . '" class="clone">';
 $html     .= '<span class="icon glyphicon glyphicon-duplicate" aria-hidden="true"></span>' .
@@ -230,10 +230,10 @@ if (count($consultation->agendaItems) > 0) {
         </label>
         <div class="middleColumn">
             <?= Html::checkbox(
-                'amendment[globalAlternative]',
-                $amendment->globalAlternative,
-                ['id' => 'globalAlternative']
-            ) ?>
+                    'amendment[globalAlternative]',
+                    $amendment->globalAlternative,
+                    ['id' => 'globalAlternative']
+                ) ?>
         </div>
     </div>
 

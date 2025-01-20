@@ -30,7 +30,7 @@ class SamlLogin implements LoginProviderInterface
             return '';
         }
         return \Yii::$app->controller->renderPartial('@app/plugins/gruene_ch_saml/views/login', [
-            'backUrl' => $backUrl
+            'backUrl' => $backUrl,
         ]);
     }
 

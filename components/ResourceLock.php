@@ -25,7 +25,7 @@ final class ResourceLock
         $options = [
             'parameters' => [
                 'database' => $app->redis['database'],
-            ]
+            ],
         ];
         if (!empty($app->redis['password'])) {
             $options['parameters']['password'] = $app->redis['password'];

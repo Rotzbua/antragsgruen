@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return  [
   'after_line' => 'Nach Zeile #LINETO#',
   'after_line_del' => 'Nach Zeile #LINETO# löschen',
   'after_line_ins' => 'Nach Zeile #LINETO# einfügen',
@@ -11,4 +11,4 @@ return array (
   'line_to' => 'Von Zeile #LINEFROM# bis #LINETO#',
   'line_to_del' => 'Von Zeile #LINEFROM# bis #LINETO# löschen',
   'line_to_ins' => 'Von Zeile #LINEFROM# bis #LINETO# einfügen',
-);
+];

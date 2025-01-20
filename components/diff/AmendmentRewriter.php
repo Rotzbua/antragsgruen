@@ -83,8 +83,8 @@ class AmendmentRewriter
         $inDiffMotion = $inDiffAmendment = false;
         $new = [];
 
-        list($wordsNewMotion, $wordsAmendment) = self::moveInsertsIntoTheirOwnWords($wordsNewMotion, $wordsAmendment);
-        list($wordsAmendment, $wordsNewMotion) = self::moveInsertsIntoTheirOwnWords($wordsAmendment, $wordsNewMotion);
+        [$wordsNewMotion, $wordsAmendment] = self::moveInsertsIntoTheirOwnWords($wordsNewMotion, $wordsAmendment);
+        [$wordsAmendment, $wordsNewMotion] = self::moveInsertsIntoTheirOwnWords($wordsAmendment, $wordsNewMotion);
 
         for ($i = 0; $i < count($wordsNewMotion[0]); $i++) {
             $wordNewMotion = $wordsNewMotion[0][$i]->diff;

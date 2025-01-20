@@ -129,7 +129,7 @@ class Permissions
         if (!in_array($motion->status, [
             Motion::STATUS_SUBMITTED_SCREENED,
             Motion::STATUS_SUBMITTED_UNSCREENED,
-            Motion::STATUS_COLLECTING_SUPPORTERS
+            Motion::STATUS_COLLECTING_SUPPORTERS,
         ])
         ) {
             return false;

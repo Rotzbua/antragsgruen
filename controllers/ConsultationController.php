@@ -68,7 +68,7 @@ class ConsultationController extends Base
             'search_results',
             [
                 'query'   => $query,
-                'results' => $results
+                'results' => $results,
             ]
         ));
     }

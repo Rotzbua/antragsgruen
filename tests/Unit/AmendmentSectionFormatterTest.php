@@ -184,7 +184,7 @@ class AmendmentSectionFormatterTest extends TestBase
     public function testWhitespaceDeleted(): void
     {
         $diffGroups = [
-            self::getAffectedLinesBlock(13, 14, '<ul><li value="1">###LINENUMBER###sich die Eltern flexibel untereinander aufteilen (8+8+8). Auch ###LINENUMBER###Alleinerziehende haben einen Anspruch auf 24 Monate FamilienZeitPlus<del aria-label="Streichen: „”"> </del></li></ul>')
+            self::getAffectedLinesBlock(13, 14, '<ul><li value="1">###LINENUMBER###sich die Eltern flexibel untereinander aufteilen (8+8+8). Auch ###LINENUMBER###Alleinerziehende haben einen Anspruch auf 24 Monate FamilienZeitPlus<del aria-label="Streichen: „”"> </del></li></ul>'),
         ];
         $text       = TextSimple::formatDiffGroup($diffGroups);
         $expect     = '<h4 class="lineSummary">Von Zeile 13 bis 14 löschen:</h4><div><ul><li value="1">sich die Eltern flexibel untereinander aufteilen (8+8+8). Auch Alleinerziehende haben einen Anspruch auf 24 Monate FamilienZeitPlus<del class="space" aria-label="Streichen: „Leerzeichen”">[Leerzeichen]</del></li></ul></div>';
@@ -232,7 +232,7 @@ Die Strategie zur Krisenbewältigung der letzten fünf Jahre hat zwar ein wichti
         $blocks  = [
             '<p><del>###LINENUMBER###Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ###LINENUMBER###eirmod tempor invidunt ut labore et dolore magna aliquyam erat</del><ins>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</ins></p>',
             '<p><del>###LINENUMBER###Lorem ipsum dolor sit amet</del><ins>Bavaria ipsum</ins></p><p class="inserted">Another inserted paragraph</p>',
-            '<ul class="deleted"><li>###LINENUMBER###Old list</li></ul><ol class="inserted"><li>New list</li></ol>'
+            '<ul class="deleted"><li>###LINENUMBER###Old list</li></ul><ol class="inserted"><li>New list</li></ol>',
         ];
         $grouped = AmendmentSectionFormatter::groupConsecutiveChangeBlocks($blocks);
         $this->assertEquals([

@@ -331,14 +331,14 @@ $voting = $motion->getVotingData();
     <h3><?= Yii::t('amend', 'proposal_public_expl_title') ?></h3>
     <?php
     echo Html::textarea(
-        'proposalExplanation',
-        $motion->proposalExplanation ?: '',
-        [
+            'proposalExplanation',
+            $motion->proposalExplanation ?: '',
+            [
             'title' => Yii::t('amend', 'proposal_public_expl_title'),
             'class' => 'form-control',
             'disabled' => $limitedDisabled,
         ]
-    );
+        );
     ?>
 </section>
 <section class="notifyProposerSection hidden">
@@ -403,10 +403,10 @@ if ($context !== 'edit' && $canBeChangedUnlimitedly) {
         <h3><?= Yii::t('amend', 'proposal_modified_accepted') ?></h3>
         <?php
         echo Html::a(
-            Yii::t('base', 'edit'),
-            UrlHelper::createMotionUrl($motion, 'edit-proposed-change'),
-            ['class' => 'editModification']
-        );
+        Yii::t('base', 'edit'),
+        UrlHelper::createMotionUrl($motion, 'edit-proposed-change'),
+        ['class' => 'editModification']
+    );
         ?>
     </section>
     <?php

@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return  [
   'createForOther' => 'Ich lege diesen Antrag für eine andere Antragsteller:in an',
   'username' => 'Benutzer:in',
   'visibilityAdmins' => 'Wird nur Administrator:innen angezeigt',
@@ -12,4 +12,4 @@ return array (
   'minSupporters1' => 'Min. %min% Unterstützer:in',
   'minSupportersX' => 'Min. %min% Unterstützer:innen',
   'ww_profile' => 'Grünes-Netz-Profil',
-);
+];

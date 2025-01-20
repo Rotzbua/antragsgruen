@@ -163,7 +163,7 @@ class Draft implements \JsonSerializable
                 $allAmendingIds = $form->getAllAmendmentIdsAffectingParagraph($section, $paragraphNo);
                 $paragraphText  = $form->getParagraphText($section, $paragraphNo, $amendmentsById);
                 /** @noinspection PhpUnusedLocalVariableInspection */
-                list($normalAmendments, $modUs) = $form->getAffectingAmendments($allAmendingIds, $amendmentsById);
+                [$normalAmendments, $modUs] = $form->getAffectingAmendments($allAmendingIds, $amendmentsById);
 
                 $draftPara                    = new DraftParagraph();
                 $draftPara->unchanged         = null;

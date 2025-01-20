@@ -95,7 +95,7 @@ trait AmendmentMergingTrait
             if ($amendment->canMergeIntoMotion(true)) {
                 return new HtmlResponse($this->render('merge_err_collision', [
                     'amendment'           => $amendment,
-                    'collidingAmendments' => $amendment->getCollidingAmendments()
+                    'collidingAmendments' => $amendment->getCollidingAmendments(),
                 ]));
             } else {
                 $this->getHttpSession()->setFlash('error', 'Not allowed to use this function');
@@ -177,7 +177,7 @@ trait AmendmentMergingTrait
                 'motion'              => $motion,
                 'amendment'           => $amendment,
                 'paragraphSections'   => $paragraphSections,
-                'allowStatusChanging' => $allowStatusChanging
+                'allowStatusChanging' => $allowStatusChanging,
             ]));
         } else {
             return new HtmlResponse($this->render('merge_without_collisions', [

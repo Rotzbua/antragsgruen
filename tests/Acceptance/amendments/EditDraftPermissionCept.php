@@ -19,7 +19,7 @@ $I->openPage(AmendmentEditPage::class, [
     'subdomain'        => 'stdparteitag',
     'consultationPath' => 'std-parteitag',
     'motionSlug'       => '3',
-    'amendmentId'      => AcceptanceTester::FIRST_FREE_AMENDMENT_ID
+    'amendmentId'      => AcceptanceTester::FIRST_FREE_AMENDMENT_ID,
 ]);
 $I->see('Änderungsantrag zu A3: Textformatierungen stellen', 'h1');
 $I->seeInField(['name' => 'sections[1]'], 'Neuer Testantrag 1');
@@ -38,7 +38,7 @@ $I->openPage(AmendmentEditPage::class, [
     'subdomain'        => 'stdparteitag',
     'consultationPath' => 'std-parteitag',
     'motionSlug'       => '3',
-    'amendmentId'      => AcceptanceTester::FIRST_FREE_AMENDMENT_ID + 1
+    'amendmentId'      => AcceptanceTester::FIRST_FREE_AMENDMENT_ID + 1,
 ]);
 $I->see('Änderungsantrag zu A3: Textformatierungen stellen', 'h1');
 $I->seeInField(['name' => 'sections[1]'], 'Neuer Testantrag 2');
@@ -50,7 +50,7 @@ $I->openPage(AmendmentEditPage::class, [
     'subdomain'        => 'stdparteitag',
     'consultationPath' => 'std-parteitag',
     'motionSlug'       => '3',
-    'amendmentId'      => AcceptanceTester::FIRST_FREE_AMENDMENT_ID + 1
+    'amendmentId'      => AcceptanceTester::FIRST_FREE_AMENDMENT_ID + 1,
 ]);
 $I->dontSee('Änderungsantrag zu A3: Textformatierungen stellen', 'h1');
 $I->dontSeeElement(['name' => 'sections[1]']);

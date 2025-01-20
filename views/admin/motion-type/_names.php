@@ -51,7 +51,7 @@ use yii\helpers\Html;
             $options = [
                 'class' => 'form-control',
                 'id' => 'typeCreateTitle',
-                'placeholder' => Yii::t('admin', 'motion_type_create_placeh')
+                'placeholder' => Yii::t('admin', 'motion_type_create_placeh'),
             ];
             echo HTMLTools::smallTextarea('type[createTitle]', $options, $motionType->createTitle);
             ?>

@@ -58,8 +58,8 @@ $sheet->getStyle('A1:' . $LAST_COL . '2')->applyFromArray([
         'outline' => [
             'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM,
             'color' => ['argb' => '00000000'],
-        ]
-    ]
+        ],
+    ],
 ]);
 
 
@@ -88,8 +88,8 @@ $sheet->getStyle('A3:' . $LAST_COL . $row)->applyFromArray([
         'outline' => [
             'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM,
             'color' => ['argb' => '00000000'],
-        ]
-    ]
+        ],
+    ],
 ]);
 
 $fileName = \app\models\settings\AntragsgruenApp::getInstance()->getTmpDir() . uniqid();

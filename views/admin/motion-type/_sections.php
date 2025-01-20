@@ -266,7 +266,7 @@ $sName = 'sections[' . $sectionId . ']';
             $newRow   = new TabularDataType([
                 'rowId' => '#NEWDATA#',
                 'type'  => TabularDataType::TYPE_STRING,
-                'title' => ''
+                'title' => '',
             ]);
             $template = $dataRowFormatter($newRow, 0, $sName);
             ?>

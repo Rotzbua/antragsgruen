@@ -179,7 +179,7 @@ class ManagerController extends Base
             'createsite',
             [
                 'model'  => $model,
-                'errors' => $errors
+                'errors' => $errors,
             ]
         ));
     }

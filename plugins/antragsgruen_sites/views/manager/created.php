@@ -20,13 +20,13 @@ if ($form->singleMotion) {
         '/motion/edit',
         'subdomain'        => $form->site->subdomain,
         'consultationPath' => $form->consultation->urlPath,
-        'motionSlug'       => $form->motion->id
+        'motionSlug'       => $form->motion->id,
     ]);
 } else {
     $redirectUrl = Url::toRoute([
         '/consultation/index',
         'subdomain'        => $form->site->subdomain,
-        'consultationPath' => $form->consultation->urlPath
+        'consultationPath' => $form->consultation->urlPath,
     ]);
 }
 ?>

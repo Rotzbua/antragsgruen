@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return  [
   'Initiators' => 'Initiator:innen',
   'InitiatorSingle' => 'Antragsteller:in',
   'InitiatorMulti' => 'Antragsteller:innen',
@@ -12,4 +12,4 @@ ich schreibe wegen Deines %MOTION% , für den ich im Landesvorstand zuständig b
   'default_creator' => 'Antragsrot',
   'truncated_supp_1' => 'sowie 1 weitere Antragsteller:in, die online auf Antragsrot eingesehen werden kann.',
   'truncated_supp_x' => 'sowie %NUM% weitere Antragsteller:innen, die online auf Antragsrot eingesehen werden können.',
-);
+];

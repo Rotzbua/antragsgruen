@@ -202,7 +202,7 @@ class MotionComment extends IComment
                     /** @var ActiveQuery $query */
                     $query->andWhere('motion.status NOT IN (' . implode(', ', $invisibleStatuses) . ')');
                     $query->andWhere('motion.consultationId = ' . intval($consultation->id));
-                }
+                },
             ]
         );
         $query->orderBy('dateCreation DESC');

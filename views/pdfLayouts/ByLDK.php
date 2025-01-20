@@ -73,7 +73,7 @@ class ByLDK extends IPDFLayout
         $pdf->SetLineStyle(
             [
                 'width' => 3,
-                'color' => array(150, 150, 150),
+                'color' => [150, 150, 150],
             ]
         );
         $pdf->Line((210 - $width) / 2, 78, (210 + $width) / 2, 78);
@@ -192,7 +192,7 @@ class ByLDK extends IPDFLayout
         $pdf->SetLineStyle(
             [
                 'width' => 3,
-                'color' => array(150, 150, 150),
+                'color' => [150, 150, 150],
             ]
         );
         $pdf->Line((210 - $width) / 2, 78, (210 + $width) / 2, 78);

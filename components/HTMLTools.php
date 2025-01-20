@@ -41,7 +41,7 @@ class HTMLTools
 
         $purifier = new \HTMLPurifier($config);
         $purifier->config->set('Cache.SerializerPath', \Yii::$app->getRuntimePath());
-        $purifier->config->set('Cache.SerializerPermissions', 0775);
+        $purifier->config->set('Cache.SerializerPermissions', 0o775);
 
         return $purifier->purify($html);
     }
@@ -102,7 +102,7 @@ class HTMLTools
             'Core.AllowHostnameUnderscore'            => true,
             'Core.EnableIDNA'                         => true,
             'Output.SortAttr'                         => true,
-            'Output.Newline'                          => "\n"
+            'Output.Newline'                          => "\n",
         ]);
         $configInstance->autoFinalize = false;
 
@@ -222,7 +222,7 @@ class HTMLTools
 
         $allowedTags = [
             'p', 'strong', 'em', 'ul', 'ol', 'li', 'span', 'a', 'br', 'blockquote',
-            'sub', 'sup', 'pre', 'h1', 'h2', 'h3', 'h4'
+            'sub', 'sup', 'pre', 'h1', 'h2', 'h3', 'h4',
         ];
 
         $allowedClasses = array_merge(['underline', 'subscript', 'superscript'], self::KNOWN_OL_CLASSES);
@@ -249,7 +249,7 @@ class HTMLTools
             'Core.AllowHostnameUnderscore'            => true,
             'Core.EnableIDNA'                         => true,
             'Output.SortAttr'                         => true,
-            'Output.Newline'                          => "\n"
+            'Output.Newline'                          => "\n",
         ]);
         $configInstance->autoFinalize = false;
         $html = self::purify($configInstance, $html);
@@ -407,7 +407,7 @@ class HTMLTools
         }
 
         if ($element->nodeName === 'li') {
-            $formatting = $formatting ?? self::OL_DECIMAL_DOT;
+            $formatting ??= self::OL_DECIMAL_DOT;
             if (!$element->hasAttribute('value')) {
                 $liVal = self::getLiValue($counter, null, $formatting);
                 $element->setAttribute('value', $liVal);

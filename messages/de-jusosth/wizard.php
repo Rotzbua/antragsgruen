@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return  [
   'title' => 'Antragsrot-Seite anlegen',
   'motwho_loggedin' => 'Registrierte Benutzer:innen',
   'amendwho_loggedin' => 'Registrierte Benutzer:innen',
@@ -19,4 +19,4 @@ return array (
                                 <br><br>
                                 Bitte beachte aber, dass dies nur eine Test-Seite ist und <strong>nach drei Tagen wieder gelöscht</strong> wird.<br><br>
                                 <em>Diesen Text kannst du übrigens bearbeiten, indem du rechts oben auf "Bearbeiten" klickst.</em>',
-);
+];

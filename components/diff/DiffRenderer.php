@@ -295,10 +295,10 @@ class DiffRenderer
     protected function renderHtmlWithPlaceholdersIntElement(\DOMElement $child, array &$newChildren, ?string &$inIns, ?string &$inDel): void
     {
         if ($inIns !== null && self::nodeContainsText($child, self::INS_END)) {
-            list($currNewChildren, $inIns, $inDel) = $this->renderHtmlWithPlaceholdersIntInIns($child, $inIns);
+            [$currNewChildren, $inIns, $inDel] = $this->renderHtmlWithPlaceholdersIntInIns($child, $inIns);
             $newChildren = array_merge($newChildren, $currNewChildren);
         } elseif ($inDel !== null && self::nodeContainsText($child, self::DEL_END)) {
-            list($currNewChildren, $inIns, $inDel) = $this->renderHtmlWithPlaceholdersIntInDel($child, $inDel);
+            [$currNewChildren, $inIns, $inDel] = $this->renderHtmlWithPlaceholdersIntInDel($child, $inDel);
             $newChildren = array_merge($newChildren, $currNewChildren);
         } elseif ($inIns !== null) {
             /** @var \DOMElement $lastEl */
@@ -335,7 +335,7 @@ class DiffRenderer
                 $newChildren[] = $clone;
             }
         } else {
-            list($currNewChildren, $inIns, $inDel) = $this->renderHtmlWithPlaceholdersIntNormal($child);
+            [$currNewChildren, $inIns, $inDel] = $this->renderHtmlWithPlaceholdersIntNormal($child);
             $newChildren = array_merge($newChildren, $currNewChildren);
         }
     }
@@ -352,7 +352,7 @@ class DiffRenderer
             if (is_a($child, \DOMText::class)) {
                 /** @var \DOMText $child */
                 $lastEl = (count($newChildren) > 0 ? $newChildren[count($newChildren) - 1] : null);
-                list($currNewChildren, $inIns, $inDel) = $this->textToNodes($child->nodeValue, $inIns, $inDel, $lastEl);
+                [$currNewChildren, $inIns, $inDel] = $this->textToNodes($child->nodeValue, $inIns, $inDel, $lastEl);
                 $newChildren = array_merge($newChildren, $currNewChildren);
             } elseif (is_a($child, \DOMElement::class)) {
                 $this->renderHtmlWithPlaceholdersIntElement($child, $newChildren, $inIns, $inDel);
@@ -383,7 +383,7 @@ class DiffRenderer
             if (is_a($child, \DOMText::class)) {
                 /** @var \DOMText $child */
                 $lastEl = (count($newChildren) > 0 ? $newChildren[count($newChildren) - 1] : null);
-                list($currNewChildren, $inIns, $inDel) = $this->textToNodes($child->nodeValue, $inIns, $inDel, $lastEl);
+                [$currNewChildren, $inIns, $inDel] = $this->textToNodes($child->nodeValue, $inIns, $inDel, $lastEl);
                 $newChildren = array_merge($newChildren, $currNewChildren);
             } elseif (is_a($child, \DOMElement::class)) {
                 $this->renderHtmlWithPlaceholdersIntElement($child, $newChildren, $inIns, $inDel);
@@ -409,7 +409,7 @@ class DiffRenderer
             if (is_a($child, \DOMText::class)) {
                 /** @var \DOMText $child */
                 $lastEl = (count($newChildren) > 0 ? $newChildren[count($newChildren) - 1] : null);
-                list($currNewChildren, $inIns, $inDel) = $this->textToNodes($child->nodeValue, $inIns, $inDel, $lastEl);
+                [$currNewChildren, $inIns, $inDel] = $this->textToNodes($child->nodeValue, $inIns, $inDel, $lastEl);
                 $newChildren = array_merge($newChildren, $currNewChildren);
             } elseif (is_a($child, \DOMElement::class)) {
                 $this->renderHtmlWithPlaceholdersIntElement($child, $newChildren, $inIns, $inDel);

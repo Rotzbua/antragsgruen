@@ -87,7 +87,7 @@ echo Html::beginForm('', 'post', [
     'id'                       => 'motionEditForm',
     'class'                    => 'motionEditForm draftForm',
     'enctype'                  => 'multipart/form-data',
-    'data-antragsgruen-widget' => 'frontend/MotionEditForm'
+    'data-antragsgruen-widget' => 'frontend/MotionEditForm',
 ]);
 
 echo '<div class="content">';

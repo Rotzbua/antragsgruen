@@ -138,11 +138,11 @@ $handledSiteSettings = [];
                         ?>
                     </label>
                     <?= Html::a(
-                        '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> ' .
+                            '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> ' .
                         ($hasCustom ? Yii::t('admin', 'con_ci_custom_edit') : Yii::t('admin', 'con_ci_custom_create')),
-                        UrlHelper::createUrl(['/admin/index/theming', 'default' => 'DEFAULT']),
-                        ['class' => 'editThemeLink']
-                    ) ?>
+                            UrlHelper::createUrl(['/admin/index/theming', 'default' => 'DEFAULT']),
+                            ['class' => 'editThemeLink']
+                        ) ?>
                 </div>
             </fieldset>
         </div>
@@ -184,11 +184,11 @@ $handledSiteSettings = [];
                 </legend>
                 <div class="selectHolder"><?php
                     echo Html::dropDownList(
-                        'settings[motiondataMode]',
-                        $consultation->getSettings()->motiondataMode,
-                        $consultation->getSettings()->getMotiondataModes(),
-                        ['id' => 'motiondataMode', 'class' => 'stdDropdown fullsize']
-                    );
+                    'settings[motiondataMode]',
+                    $consultation->getSettings()->motiondataMode,
+                    $consultation->getSettings()->getMotiondataModes(),
+                    ['id' => 'motiondataMode', 'class' => 'stdDropdown fullsize']
+                );
                     ?></div>
             </fieldset>
 
@@ -225,7 +225,7 @@ $handledSiteSettings = [];
                     Yii::t('speech', 'subqueue_female'),
                     Yii::t('speech', 'subqueue_male'),
                     '',
-                    ''
+                    '',
                 ];
                 foreach ($settings->speechListSubqueues ?: [] as $speechListNo => $speechListName) {
                     $speechListsPre[$speechListNo] = $speechListName;

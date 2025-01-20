@@ -25,7 +25,7 @@ $I->dontSeeElement('#sidebar .createMotion');
 $I->openPage(MotionEditPage::class, [
     'subdomain'        => '1laenderrat2015',
     'consultationPath' => '1laenderrat2015',
-    'motionTypeId'     => 8
+    'motionTypeId'     => 8,
 ]);
 $I->dontSee(mb_strtoupper('Antrag stellen'), 'h1');
 $I->see('Keine Berechtigung zum Anlegen von Anträgen');
@@ -49,6 +49,6 @@ $I->dontSeeElement('#sidebar .createMotion');
 $I->openPage(MotionCreatePage::class, [
     'subdomain'        => '1laenderrat2015',
     'consultationPath' => '1laenderrat2015',
-    'motionTypeId'     => 8
+    'motionTypeId'     => 8,
 ]);
 $I->see(mb_strtoupper('Antrag stellen'), 'h1');

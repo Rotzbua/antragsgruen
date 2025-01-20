@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return  [
   'policy_ww_title' => 'Wurzelwerk-Nutzer:innen',
   'policy_ww_desc' => 'Wurzelwerk-Nutzer:innen',
   'policy_ww_motion_denied' => 'Nur Wurzelwerk-Nutzer:innen dürfen Anträge anlegen.',
@@ -22,4 +22,4 @@ return array (
   'supp_only_initiators' => 'Nur die Antragsteller:in',
   'supp_given_by_initiator' => 'Von der Antragsteller:in angegeben',
   'activity_someone' => 'Ein:e Benutzer:in',
-);
+];

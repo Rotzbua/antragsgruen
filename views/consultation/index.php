@@ -79,7 +79,7 @@ if ($myself) {
         foreach ($myMotions as $motionSupport) {
             /** @var Motion $motion */
             $motion = $motionSupport->getIMotion();
-            list($class, $title) = $getMyMotionAttrs($motion, $motionSupport);
+            [$class, $title] = $getMyMotionAttrs($motion, $motionSupport);
             echo '<li class="' . $class . '"><div class="firstLine">';
             if ($motion->status === \app\models\db\IMotion::STATUS_DRAFT) {
                 $motionLink = UrlHelper::createMotionUrl($motion, 'createconfirm', ['fromMode' => 'create']);
@@ -110,7 +110,7 @@ if ($myself) {
         foreach ($myAmendments as $amendmentSupport) {
             /** @var Amendment $amendment */
             $amendment = $amendmentSupport->getIMotion();
-            list($class, $title) = $getMyMotionAttrs($amendment, $amendmentSupport);
+            [$class, $title] = $getMyMotionAttrs($amendment, $amendmentSupport);
             echo '<li class="' . $class . '"><div class="firstLine">';
             if ($amendment->status === \app\models\db\IMotion::STATUS_DRAFT) {
                 $amendmentUrl = UrlHelper::createAmendmentUrl($amendment, 'createconfirm', ['fromMode' => 'create']);
@@ -150,7 +150,7 @@ if ($contentAdmin && in_array($consultation->getSettings()->startLayoutType, [Co
 echo $cache->getCached(function () use ($consultation, $layout, $contentAdmin) {
     $output = '';
     $resolutionMode = $consultation->getSettings()->startLayoutResolutions;
-    list($imotions, $resolutions) = MotionSorter::getIMotionsAndResolutions($consultation->motions);
+    [$imotions, $resolutions] = MotionSorter::getIMotionsAndResolutions($consultation->motions);
     if (count($resolutions) > 0 && $resolutionMode === ConsultationSettings::START_LAYOUT_RESOLUTIONS_ABOVE) {
         $output .= $this->render('_index_resolutions', ['consultation' => $consultation, 'resolutions' => $resolutions]);
     }

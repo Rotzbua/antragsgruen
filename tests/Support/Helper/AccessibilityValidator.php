@@ -62,12 +62,12 @@ use RuntimeException;
 
 class AccessibilityValidator extends Module
 {
-    public static array $SUPPORTED_STANDARDS = array(
+    public static array $SUPPORTED_STANDARDS = [
         'WCAG2AAA',
         'WCAG2AA',
         'WCAG2A',
         'Section508',
-    );
+    ];
     public const STANDARD_WCAG2AAA   = 'WCAG2AAA';
     public const STANDARD_WCAG2AA    = 'WCAG2AA';
     public const STANDARD_WCAG2A     = 'WCAG2A';

@@ -298,7 +298,7 @@ class MotionController extends Base
     {
         try {
             $ret = $this->getMotionTypeForCreate(intval($motionTypeId), intval($agendaItemId), intval($cloneFrom));
-            list($motionType, $agendaItem) = $ret;
+            [$motionType, $agendaItem] = $ret;
         } catch (ExceptionBase $e) {
             $this->getHttpSession()->setFlash('error', $e->getMessage());
 
@@ -316,7 +316,7 @@ class MotionController extends Base
                 $loginUrl = UrlHelper::createLoginUrl([
                     'motion/create',
                     'motionTypeId' => $motionTypeId,
-                    'agendaItemId' => $agendaItemId
+                    'agendaItemId' => $agendaItemId,
                 ]);
 
                 return new RedirectResponse($loginUrl);
@@ -440,7 +440,7 @@ class MotionController extends Base
     {
         $motion = Motion::findOne([
             'consultationId' => $this->consultation->id,
-            'titlePrefix'    => $prefix
+            'titlePrefix'    => $prefix,
         ]);
         if ($motion && $motion->isReadable()) {
             return $motion->getLink();

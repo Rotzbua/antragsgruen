@@ -27,10 +27,10 @@ use yii\helpers\Html;
                 <span class="description"></span>
                 <span class="input">
                     <?= Html::checkbox(
-                        'SiteCreateForm[functionality][]',
-                        in_array(SiteCreateForm::FUNCTIONALITY_MOTIONS, $model->functionality),
-                        ['value' => SiteCreateForm::FUNCTIONALITY_MOTIONS, "data-wording-name" => "motion"]
-                    ); ?>
+            'SiteCreateForm[functionality][]',
+            in_array(SiteCreateForm::FUNCTIONALITY_MOTIONS, $model->functionality),
+            ['value' => SiteCreateForm::FUNCTIONALITY_MOTIONS, "data-wording-name" => "motion"]
+        ); ?>
                 </span>
             </label>
             <label class="radio-checkbox-label checkbox-label description-first value-manifesto">

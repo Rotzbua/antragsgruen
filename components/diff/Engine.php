@@ -24,9 +24,9 @@ http://creativecommons.org/publicdomain/zero/1.0/legalcode
 class Engine
 {
     // define the constants
-    const UNMODIFIED = 0;
-    const DELETED    = 1;
-    const INSERTED   = 2;
+    public const UNMODIFIED = 0;
+    public const DELETED    = 1;
+    public const INSERTED   = 2;
 
     private string $IGNORE_STR = '';
 
@@ -143,8 +143,8 @@ class Engine
      */
     public function compareArrays(array $strings1, array $strings2, bool $relaxedTags): array
     {
-        list($start1, $start2) = $this->getArrayDiffStarts($strings1, $strings2, $relaxedTags);
-        list($end1, $end2) = $this->getArrayDiffEnds($strings1, $strings2, $start1, $start2, $relaxedTags);
+        [$start1, $start2] = $this->getArrayDiffStarts($strings1, $strings2, $relaxedTags);
+        [$end1, $end2] = $this->getArrayDiffEnds($strings1, $strings2, $start1, $start2, $relaxedTags);
 
         // skip any common suffix
         while ($end1 >= $start1 && $end2 >= $start2 && $this->strCmp($strings1[$end1], $strings2[$end2], $relaxedTags)) {

@@ -36,7 +36,7 @@ foreach (Stylesheet::getAllSettings($default) as $key => $setting) {
 <?= Html::beginForm(UrlHelper::createUrl('/admin/index/theming'), 'POST', [
     'class'                    => 'themingForm',
     'enctype'                  => 'multipart/form-data',
-    'data-antragsgruen-widget' => 'backend/Theming'
+    'data-antragsgruen-widget' => 'backend/Theming',
 ]) ?>
 
 <?php
@@ -84,7 +84,7 @@ foreach ($settingsByBlock as $group => $settings) {
                     }
                     if ($setting['type'] === Stylesheet::TYPE_CHECKBOX) {
                         echo Html::checkbox('stylesheet[' . $key . ']', $stylesheet->getValue($key, $default), [
-                            'id' => 'stylesheet-' . $key
+                            'id' => 'stylesheet-' . $key,
                         ]);
                     }
                     if ($setting['type'] === Stylesheet::TYPE_IMAGE) {

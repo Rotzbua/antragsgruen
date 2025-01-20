@@ -101,11 +101,11 @@ echo Html::beginForm('', 'post', [
             <label class="leftColumn control-label" for="language"><?= Yii::t('manager', 'config_lang') ?>:</label>
             <div class="rightColumn"><?php
                 echo Html::dropDownList(
-                    'language',
-                    $form->language,
-                    \app\components\yii\MessageSource::getBaseLanguages(),
-                    ['id' => 'language', 'class' => 'stdDropdown']
-                );
+    'language',
+    $form->language,
+    \app\components\yii\MessageSource::getBaseLanguages(),
+    ['id' => 'language', 'class' => 'stdDropdown']
+);
                 ?></div>
         </div>
     </div>
@@ -120,11 +120,11 @@ if (!$form->databaseParamsComeFromEnv()) {
             <label class="leftColumn control-label" for="sqlType"><?= Yii::t('manager', 'config_db_type') ?>:</label>
             <div class="rightColumn"><?php
                 echo Html::dropDownList(
-                    'sqlType',
-                    $form->sqlType,
-                    [ 'mysql' => 'MySQL / MariaDB', ],
-                    ['id' => 'sqlType', 'class' => 'stdDropdown']
-                );
+        'sqlType',
+        $form->sqlType,
+        [ 'mysql' => 'MySQL / MariaDB', ],
+        ['id' => 'sqlType', 'class' => 'stdDropdown']
+    );
                 ?></div>
         </div>
 

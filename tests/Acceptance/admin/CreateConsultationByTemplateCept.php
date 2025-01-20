@@ -78,7 +78,7 @@ $I->see('Noch eine neue Veranstaltung', '.consultation' . (AcceptanceTester::FIR
 $I->see('Standard-Veranstaltung', '.consultation' . (AcceptanceTester::FIRST_FREE_CONSULTATION_ID + 2));
 
 $I->openPage(SiteHomePage::class, [
-    'subdomain' => 'stdparteitag'
+    'subdomain' => 'stdparteitag',
 ]);
 $I->see('Noch eine neue Veranstaltung', 'h1');
 
@@ -91,6 +91,6 @@ $I->click('.consultation' . AcceptanceTester::FIRST_FREE_CONSULTATION_ID . ' .st
 $I->see('Die Veranstaltung wurde als Standard-Veranstaltung festgelegt.');
 
 $I->openPage(SiteHomePage::class, [
-    'subdomain' => 'stdparteitag'
+    'subdomain' => 'stdparteitag',
 ]);
 $I->see('Neue Veranstaltung 1', 'h1');

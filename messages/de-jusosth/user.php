@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return  [
   'err_user_acode_notfound' => 'Benutzer:in nicht gefunden / Ungültiger Code',
   'err_unknown_ww_repeat' => 'Es trat ein unbekannter Fehler auf.',
   'recover_mail_title' => 'Antragsrot: Passwort-Wiederherstellung',
@@ -60,4 +60,4 @@ Liebe Grüße,
   'confirm_username' => 'E-Mail-Adresse / Benutzer:innenname',
   'no_noti_all' => 'Alle Antragsrot-Benachrichtigungen abbestellen',
   'export_intro' => 'Hier kannst du alle personenbezogene Daten, die in Antragsrot über dich gespeichert sind, in einem maschinenlesbaren JSON-Format herunterladen.',
-);
+];

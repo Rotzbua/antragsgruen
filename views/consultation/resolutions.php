@@ -12,7 +12,7 @@ $layout->addBreadcrumb(Yii::t('con', 'resolutions'));
 $this->title = Yii::t('con', 'resolutions');
 echo '<h1>' . Html::encode(Yii::t('con', 'resolutions')) . '</h1>';
 
-list($imotions, $resolutions) = MotionSorter::getIMotionsAndResolutions($consultation->motions);
+[$imotions, $resolutions] = MotionSorter::getIMotionsAndResolutions($consultation->motions);
 
 if (count($consultation->motionTypes) > 0 && $consultation->getSettings()->getStartLayoutView() && count ($resolutions) > 0) {
     echo $this->render($consultation->getSettings()->getStartLayoutView(), [

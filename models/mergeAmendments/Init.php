@@ -253,7 +253,7 @@ class Init
     {
         $allAmendingIds = $this->getAllAmendmentIdsAffectingParagraph($section, $paragraphNo, array_keys($amendmentsById));
         /** @noinspection PhpUnusedLocalVariableInspection */
-        list($normalAmendments, $modUs) = $this->getAffectingAmendments($allAmendingIds, $amendmentsById);
+        [$normalAmendments, $modUs] = $this->getAffectingAmendments($allAmendingIds, $amendmentsById);
         $type = $section->getSettings();
 
         $vueData = [];

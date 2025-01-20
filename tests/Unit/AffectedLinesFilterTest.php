@@ -50,7 +50,7 @@ class AffectedLinesFilterTest extends TestBase
         ];
         $expected  = [
             self::getAffectedLinesBlock(3, 5, '<ul><li>###LINENUMBER###<del>Test 3 ###LINENUMBER###Test 4 ###LINENUMBER###Test 5</del></li></ul>' .
-                '<ul><li><p class="inserted">Neuer Text.</p></li></ul>')
+                '<ul><li><p class="inserted">Neuer Text.</p></li></ul>'),
         ];
         $diff      = implode('', $diffParas);
         $lines     = AffectedLinesFilter::splitToAffectedLines($diff, 1);
@@ -92,7 +92,7 @@ class AffectedLinesFilterTest extends TestBase
         // 'Inserted LIs should be shown'
         $in     = '<ul class="inserted"><li>Oamoi a Maß und no a Maß</li></ul>';
         $expect = [
-            self::getAffectedLinesBlock(0, 0, '<ul class="inserted"><li>Oamoi a Maß und no a Maß</li></ul>')
+            self::getAffectedLinesBlock(0, 0, '<ul class="inserted"><li>Oamoi a Maß und no a Maß</li></ul>'),
         ];
         $out    = AffectedLinesFilter::splitToAffectedLines($in, 1);
         $this->assertEquals($expect, $out);
@@ -121,7 +121,7 @@ class AffectedLinesFilterTest extends TestBase
     {
         $in     = '<div style="color:#FF0000; margin: 0; padding: 0;"><ul class="deleted"><li>###LINENUMBER###Woibbadinga noch da Giasinga Heiwog Biazelt mechad mim Spuiratz, soi zwoa.</li></ul></div>';
         $expect = [
-            self::getAffectedLinesBlock(1, 1, '<div style="color:#FF0000;margin:0;padding:0;"><ul class="deleted"><li>###LINENUMBER###Woibbadinga noch da Giasinga Heiwog Biazelt mechad mim Spuiratz, soi zwoa.</li></ul></div>')
+            self::getAffectedLinesBlock(1, 1, '<div style="color:#FF0000;margin:0;padding:0;"><ul class="deleted"><li>###LINENUMBER###Woibbadinga noch da Giasinga Heiwog Biazelt mechad mim Spuiratz, soi zwoa.</li></ul></div>'),
         ];
 
         $out = AffectedLinesFilter::splitToAffectedLines($in, 1);
@@ -214,7 +214,7 @@ class AffectedLinesFilterTest extends TestBase
             '<ul><li><p>###LINENUMBER###Point <del>1</del><ins>2</ins></p><ul><li>###LINENUMBER###Nested 1</li><li><ins>Nested 2</ins></li></ul></li></ul>',
             '<ul><li>###LINENUMBER###Point 2</li></ul>',
             '<ul><li>###LINENUMBER###Test 3</li></ul>',
-            '<p class="deleted">###LINENUMBER###Test</p>'
+            '<p class="deleted">###LINENUMBER###Test</p>',
         ];
         $expected  = [
             self::getAffectedLinesBlock(1, 2, '<p>###LINENUMBER###Test Test<ins>2</ins></p><ul><li><p>###LINENUMBER###Point <del>1</del><ins>2</ins></p></li></ul>'),
@@ -355,7 +355,7 @@ class AffectedLinesFilterTest extends TestBase
             '<p class="inserted">Bildung für Flüchtende beginnt nicht erst in Deutschland, </p><ins><br></ins>' .
             '<p>###LINENUMBER###<strong>Kommunen als Bildungsort </strong></p>';
         $expect = [
-            self::getAffectedLinesBlock(3, 3, '<ins><br></ins><p class="inserted"><strong>Bildung in den Flüchtlingslagern</strong></p><ins><br></ins><p class="inserted">Bildung für Flüchtende beginnt nicht erst in Deutschland, </p><ins><br></ins>')
+            self::getAffectedLinesBlock(3, 3, '<ins><br></ins><p class="inserted"><strong>Bildung in den Flüchtlingslagern</strong></p><ins><br></ins><p class="inserted">Bildung für Flüchtende beginnt nicht erst in Deutschland, </p><ins><br></ins>'),
         ];
         $out    = AffectedLinesFilter::splitToAffectedLines($in, 1);
         $this->assertEquals($expect, $out);

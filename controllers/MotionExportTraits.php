@@ -116,7 +116,8 @@ trait MotionExportTraits
             $pdfData = LayoutHelper::createPdfTcpdf($motion);
         }
 
-        return new BinaryFileResponse(BinaryFileResponse::TYPE_PDF,
+        return new BinaryFileResponse(
+            BinaryFileResponse::TYPE_PDF,
             $pdfData,
             false,
             $motion->getFilenameBase(false),
@@ -143,15 +144,15 @@ trait MotionExportTraits
 
         if ($selectedPdfLayout->isHtmlToPdfLayout()) {
             $pdfData = $this->renderPartial('pdf_amend_collection_html2pdf', [
-                'motion' => $motion, 'amendments' => $amendments
+                'motion' => $motion, 'amendments' => $amendments,
             ]);
         } elseif ($selectedPdfLayout->latexId !== null) {
             $pdfData = $this->renderPartial('pdf_amend_collection_tex', [
-                'motion' => $motion, 'amendments' => $amendments, 'texTemplate' => $motion->motionType->texTemplate
+                'motion' => $motion, 'amendments' => $amendments, 'texTemplate' => $motion->motionType->texTemplate,
             ]);
         } else {
             $pdfData = $this->renderPartial('pdf_amend_collection_tcpdf', [
-                'motion' => $motion, 'amendments' => $amendments
+                'motion' => $motion, 'amendments' => $amendments,
             ]);
         }
 
@@ -208,7 +209,7 @@ trait MotionExportTraits
     public function actionFullpdf(string $motionTypeId = '', int $inactive = 0, int $resolutions = 0): ResponseInterface
     {
         try {
-            list($imotions, $texTemplate) = $this->getMotionsAndTemplate($motionTypeId, ($inactive === 1), ($resolutions === 1));
+            [$imotions, $texTemplate] = $this->getMotionsAndTemplate($motionTypeId, ($inactive === 1), ($resolutions === 1));
             /** @var IMotion[] $imotions */
             if (count($imotions) === 0) {
                 return new HtmlErrorResponse(404, \Yii::t('motion', 'none_yet'));
@@ -244,7 +245,7 @@ trait MotionExportTraits
     public function actionPdfcollection(string $motionTypeId = '', int $inactive = 0, int $resolutions = 0): ResponseInterface
     {
         try {
-            list($imotions, $texTemplate) = $this->getMotionsAndTemplate($motionTypeId, ($inactive === 1), ($resolutions === 1));
+            [$imotions, $texTemplate] = $this->getMotionsAndTemplate($motionTypeId, ($inactive === 1), ($resolutions === 1));
             if (count($imotions) === 0) {
                 return new HtmlErrorResponse(404, \Yii::t('motion', 'none_yet'));
             }

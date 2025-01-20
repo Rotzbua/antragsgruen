@@ -31,7 +31,7 @@ class PDF extends ISectionType
         }
 
         $params = [
-            'sectionId'  => $section->sectionId
+            'sectionId'  => $section->sectionId,
         ];
         if ($showAlways) {
             $params['showAlways'] = $section->getShowAlwaysToken();

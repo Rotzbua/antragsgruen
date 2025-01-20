@@ -13,16 +13,16 @@ class ArrayMatcherTest extends TestBase
     {
         $orig    = [
             '<p>Original line</p>',
-            '<p>Another original line</p>'
+            '<p>Another original line</p>',
         ];
         $new     = [
             '<p>Inserted</p>',
             '<p>Original line</p>',
-            '<p>Changed line</p>'
+            '<p>Changed line</p>',
         ];
         $matcher = new ArrayMatcher();
         $matcher->addIgnoredString('###LINEBNUMBER###');
-        list($ref, $matching) = $matcher->matchForDiff($orig, $new);
+        [$ref, $matching] = $matcher->matchForDiff($orig, $new);
         $this->assertEquals([
             '<p>Inserted</p>',
             '<p>Original line</p>',
@@ -38,17 +38,17 @@ class ArrayMatcherTest extends TestBase
         $orig     = [
             '<p>Test line</p>',
             '<p>Original line</p>',
-            '<p>Another original line</p>'
+            '<p>Another original line</p>',
         ];
         $new      = [
             '<p>Inserted</p>',
             '<p>Test2 line</p>',
             '<p>Original line</p>',
-            '<p>Changed line</p>'
+            '<p>Changed line</p>',
         ];
         $matcher  = new ArrayMatcher();
         $matcher->addIgnoredString('###LINEBNUMBER###');
-        list($ref, $matching) = $matcher->matchForDiff($orig, $new);
+        [$ref, $matching] = $matcher->matchForDiff($orig, $new);
 
 
         $this->assertEquals([

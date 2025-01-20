@@ -16,11 +16,11 @@ use yii\helpers\Html;
             <div class="has-feedback">
                 <label class="name" for="siteTitle"><?= $t('sitedata_sitetitle') ?>:</label>
                 <?= Html::input(
-                    'text',
-                    'SiteCreateForm[title]',
-                    $model->title,
-                    ['id' => 'siteTitle', 'class' => 'form-control', 'required' => 'required']
-                ); ?>
+    'text',
+    'SiteCreateForm[title]',
+    $model->title,
+    ['id' => 'siteTitle', 'class' => 'form-control', 'required' => 'required']
+); ?>
                 <span class="error glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                 <span class="success glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
             </div>
@@ -47,10 +47,10 @@ use yii\helpers\Html;
                     <strong><?= $t('sitedata_contact') ?>:</strong><br>
                     <small><?= $t('sitedata_contact_hint') ?></small>
                     <?= Html::textarea(
-                        'SiteCreateForm[contact]',
-                        $model->contact,
-                        ['rows' => 5, 'required' => 'required', 'id' => 'siteContact', 'class' => 'form-control']
-                    ) ?>
+                    'SiteCreateForm[contact]',
+                    $model->contact,
+                    ['rows' => 5, 'required' => 'required', 'id' => 'siteContact', 'class' => 'form-control']
+                ) ?>
                 </label>
 
             </div>

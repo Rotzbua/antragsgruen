@@ -262,8 +262,8 @@ class ArrayMatcher
                 $newRef[]      = $diff[$i][0];
                 $newMatching[] = $diff[$i][0];
             } elseif ($diff[$i][1] == Engine::DELETED) {
-                list($deletes, $inserts) = $this->getSubsequentInsertsDeletes($diff, $i);
-                list($tmpRef, $tmpMatch) = $this->matchArrayUnresolved($deletes, $inserts);
+                [$deletes, $inserts] = $this->getSubsequentInsertsDeletes($diff, $i);
+                [$tmpRef, $tmpMatch] = $this->matchArrayUnresolved($deletes, $inserts);
                 $newRef      = array_merge($newRef, $tmpRef);
                 $newMatching = array_merge($newMatching, $tmpMatch);
                 $i += count($deletes) + count($inserts) - 1;
@@ -288,7 +288,7 @@ class ArrayMatcher
         $oldParagraphs = array_map(fn(SectionedParagraph $par) => $par->html, $oldParagraphs);
 
         $matcher = new ArrayMatcher();
-        list($oldAdjusted, $newAdjusted) = $matcher->matchForDiff($oldParagraphs, $newParagraphs);
+        [$oldAdjusted, $newAdjusted] = $matcher->matchForDiff($oldParagraphs, $newParagraphs);
         if (count($oldAdjusted) != count($newAdjusted)) {
             throw new Internal('computeMatchingAffectedParagraphs: number of sections does not match');
         }

@@ -22,7 +22,7 @@ class Module extends ModuleBase
     public static function getForcedLayoutHooks(Layout $layoutSettings, ?Consultation $consultation): array
     {
         return [
-            new LayoutHooks($layoutSettings, $consultation)
+            new LayoutHooks($layoutSettings, $consultation),
         ];
     }
 
@@ -100,7 +100,8 @@ class Module extends ModuleBase
     public static function getConsultationExtraSettingsForm(Consultation $consultation): string
     {
         return \Yii::$app->controller->renderPartial(
-            '@app/plugins/discourse/views/admin/consultation_settings', ['consultation' => $consultation]
+            '@app/plugins/discourse/views/admin/consultation_settings',
+            ['consultation' => $consultation]
         );
     }
 }

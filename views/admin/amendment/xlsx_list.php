@@ -140,8 +140,8 @@ $sheet->getStyle('A1:' . $LAST_COL . '2')->applyFromArray([
         'outline' => [
             'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM,
             'color' => ['argb' => '00000000'],
-        ]
-    ]
+        ],
+    ],
 ]);
 
 
@@ -278,8 +278,8 @@ foreach ($amendments as $amendmentGroup) {
             'outline' => [
                 'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM,
                 'color' => ['argb' => '00000000'],
-            ]
-        ]
+            ],
+        ],
     ]);
 
     $row++;

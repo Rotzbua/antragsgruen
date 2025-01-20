@@ -33,7 +33,7 @@ class AmendmentController extends AdminBase
             'textCombined' => $textCombined,
         ]);
 
-        return new BinaryFileResponse(BinaryFileResponse::TYPE_ODS, $ods, true,'amendments');
+        return new BinaryFileResponse(BinaryFileResponse::TYPE_ODS, $ods, true, 'amendments');
     }
 
     public function actionXlsxList(bool $textCombined = false, int $inactive = 0): BinaryFileResponse
@@ -46,7 +46,7 @@ class AmendmentController extends AdminBase
             'textCombined' => $textCombined,
         ]);
 
-        return new BinaryFileResponse(BinaryFileResponse::TYPE_XLSX, $ods, true,'amendments');
+        return new BinaryFileResponse(BinaryFileResponse::TYPE_XLSX, $ods, true, 'amendments');
     }
 
     public function actionOdslistShort(int $textCombined = 0, int $inactive = 0, int $maxLen = 2000): BinaryFileResponse
@@ -322,7 +322,7 @@ class AmendmentController extends AdminBase
             $this->getHttpSession()->setFlash('success', \Yii::t('admin', 'saved'));
         }
 
-        $form = new AmendmentEditForm($amendment->getMyMotion(),$amendment->getMyAgendaItem(), $amendment, null, null);
+        $form = new AmendmentEditForm($amendment->getMyMotion(), $amendment->getMyAgendaItem(), $amendment, null, null);
         $form->setAdminMode(true);
 
         return new HtmlResponse($this->render('update', ['amendment' => $amendment, 'form' => $form]));

@@ -229,10 +229,10 @@ if ($consultation->havePrivilege(Privileges::PRIVILEGE_SITE_ADMIN, null)) {
             <label>
                 <?php
                 echo Html::checkbox(
-                    'settings[singleMotionMode]',
-                    ($settings->forceMotion !== null),
-                    ['id' => 'singleMotionMode']
-                );
+    'settings[singleMotionMode]',
+    ($settings->forceMotion !== null),
+    ['id' => 'singleMotionMode']
+);
                 echo ' ' . Yii::t('admin', 'con_single_motion_mode');
                 ?>
             </label>
@@ -252,11 +252,11 @@ if ($consultation->havePrivilege(Privileges::PRIVILEGE_SITE_ADMIN, null)) {
             <label class="leftColumn" for="forceMotion"><?= Yii::t('admin', 'con_force_motion') ?>:</label>
             <div class="rightColumn">
                 <?= Html::dropDownList(
-                    'settings[forceMotion]',
-                    $settings->forceMotion,
-                    $motions,
-                    ['id' => 'forceMotion', 'class' => 'stdDropdown']
-                );
+            'settings[forceMotion]',
+            $settings->forceMotion,
+            $motions,
+            ['id' => 'forceMotion', 'class' => 'stdDropdown']
+        );
                 ?>
             </div>
         </div>
@@ -307,11 +307,11 @@ if ($consultation->havePrivilege(Privileges::PRIVILEGE_SITE_ADMIN, null)) {
             </div>
             <div class="rightColumn">
                 <?= Html::dropDownList(
-                    'consultation[amendmentNumbering]',
-                    $consultation->amendmentNumbering,
-                    \app\models\amendmentNumbering\IAmendmentNumbering::getNames(),
-                    ['id' => 'amendmentNumbering', 'class' => 'stdDropdown']
-                );
+            'consultation[amendmentNumbering]',
+            $consultation->amendmentNumbering,
+            \app\models\amendmentNumbering\IAmendmentNumbering::getNames(),
+            ['id' => 'amendmentNumbering', 'class' => 'stdDropdown']
+        );
                 ?>
             </div>
         </div>

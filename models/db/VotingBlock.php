@@ -571,7 +571,7 @@ class VotingBlock extends ActiveRecord implements IHasPolicies
             VotingBlock::STATUS_OFFLINE,
             VotingBlock::STATUS_PREPARING,
             VotingBlock::STATUS_CLOSED_PUBLISHED,
-            VotingBlock::STATUS_CLOSED_UNPUBLISHED
+            VotingBlock::STATUS_CLOSED_UNPUBLISHED,
         ]);
     }
 

@@ -352,10 +352,10 @@ if ($controller->site) {
             <div class="exportRow">
                 <?php
                 echo Html::a(
-                    Yii::t('user', 'export_btn'),
-                    UrlHelper::createUrl('user/data-export'),
-                    ['class' => 'btn btn-primary']
-                );
+    Yii::t('user', 'export_btn'),
+    UrlHelper::createUrl('user/data-export'),
+    ['class' => 'btn btn-primary']
+);
                 ?>
             </div>
         </div>

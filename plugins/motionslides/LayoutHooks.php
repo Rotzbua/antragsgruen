@@ -12,7 +12,8 @@ class LayoutHooks extends Hooks
     {
         if ($admin) {
             $before .= RequestContext::getController()->renderPartial(
-                '@app/plugins/motionslides/views/admin-content-page', ['pageData' => $text]
+                '@app/plugins/motionslides/views/admin-content-page',
+                ['pageData' => $text]
             );
         }
 

@@ -260,13 +260,13 @@ foreach (IPolicy::getPolicies() as $policy) {
             <legend class="hidden"><?= Yii::t('admin', 'motion_type_initiators_merge') ?></legend>
             <label><?php
                 echo Html::radio(
-                    'type[initiatorsCanMergeAmendments]',
-                    ($motionType->initiatorsCanMergeAmendments == ConsultationMotionType::INITIATORS_MERGE_NEVER),
-                    [
+            'type[initiatorsCanMergeAmendments]',
+            ($motionType->initiatorsCanMergeAmendments == ConsultationMotionType::INITIATORS_MERGE_NEVER),
+            [
                         'value' => ConsultationMotionType::INITIATORS_MERGE_NEVER,
                         'id' => 'initiatorsCanMerge' . ConsultationMotionType::INITIATORS_MERGE_NEVER,
                     ]
-                );
+        );
                 ?> <?= Yii::t('admin', 'motion_type_initiators_merge_no') ?>
             </label>
             <label><?php

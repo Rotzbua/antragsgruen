@@ -119,7 +119,7 @@ class AmendmentPublished
             $motion->getMyMotionType()->initiatorsCanMergeAmendments,
             [
                 ConsultationMotionType::INITIATORS_MERGE_NO_COLLISION,
-                ConsultationMotionType::INITIATORS_MERGE_WITH_COLLISION
+                ConsultationMotionType::INITIATORS_MERGE_WITH_COLLISION,
             ]
         );
 

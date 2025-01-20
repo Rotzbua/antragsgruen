@@ -99,7 +99,7 @@ $I->click('.consultation' . AcceptanceTester::FIRST_FREE_CONSULTATION_ID . ' .st
 $I->see('Die Veranstaltung wurde als Standard-Veranstaltung festgelegt.');
 
 $I->openPage(SiteHomePage::class, [
-    'subdomain' => 'stdparteitag'
+    'subdomain' => 'stdparteitag',
 ]);
 $I->see('Neue Veranstaltung 1', 'h1');
 

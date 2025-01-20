@@ -69,7 +69,7 @@ class MotionSection extends IMotionSection
         return in_array($type, [
             ISectionType::TYPE_PDF_ALTERNATIVE,
             ISectionType::TYPE_PDF_ATTACHMENT,
-            ISectionType::TYPE_IMAGE
+            ISectionType::TYPE_IMAGE,
         ]);
     }
 
@@ -82,7 +82,7 @@ class MotionSection extends IMotionSection
         }
         $path .= ($this->sectionId % 100);
         if (!file_exists($path)) {
-            mkdir($path, 0700, true);
+            mkdir($path, 0o700, true);
         }
         $path .= '/';
         $path .= 'motion-section-' . intval($this->motionId) . '-' . intval($this->sectionId);
@@ -237,7 +237,7 @@ class MotionSection extends IMotionSection
             if (in_array($this->getSettings()->type, [
                 ISectionType::TYPE_PDF_ALTERNATIVE,
                 ISectionType::TYPE_PDF_ATTACHMENT,
-                ISectionType::TYPE_IMAGE
+                ISectionType::TYPE_IMAGE,
             ])) {
                 return base64_decode($this->data);
             } else {
@@ -255,7 +255,7 @@ class MotionSection extends IMotionSection
             if (in_array($this->getSettings()->type, [
                 ISectionType::TYPE_PDF_ALTERNATIVE,
                 ISectionType::TYPE_PDF_ATTACHMENT,
-                ISectionType::TYPE_IMAGE
+                ISectionType::TYPE_IMAGE,
             ])) {
                 $this->data = base64_encode($data);
             } else {

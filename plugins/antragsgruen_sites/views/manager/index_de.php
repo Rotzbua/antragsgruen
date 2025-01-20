@@ -255,7 +255,7 @@ $controller->layoutParams->addInlineCss('
             'post',
             [
                 'class' => 'form-inline login_saml',
-                'style' => 'margin-top: 20px;'
+                'style' => 'margin-top: 20px;',
             ]
         );
         echo '

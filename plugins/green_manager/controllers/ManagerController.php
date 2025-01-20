@@ -125,7 +125,7 @@ class ManagerController extends Base
             '@app/plugins/green_manager/views/manager/createsite',
             [
                 'model'  => $model,
-                'errors' => $errors
+                'errors' => $errors,
             ]
         ));
     }

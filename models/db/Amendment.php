@@ -563,7 +563,7 @@ class Amendment extends IMotion implements IRSSItem
                     /** @var ActiveQuery $query */
                     $query->andWhere('motion.status NOT IN (' . implode(', ', $invisibleStatuses) . ')');
                     $query->andWhere('motion.consultationId = ' . intval($consultation->id));
-                }
+                },
             ]
         );
         $query->orderBy("amendment.dateCreation DESC");
@@ -590,7 +590,7 @@ class Amendment extends IMotion implements IRSSItem
                     /** @var ActiveQuery $query */
                     $query->andWhere('motion.status NOT IN (' . implode(', ', $invisibleStatuses) . ')');
                     $query->andWhere('motion.consultationId = ' . intval($consultation->id));
-                }
+                },
             ]
         );
         $query->orderBy("dateCreation DESC");

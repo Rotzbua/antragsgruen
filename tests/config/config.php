@@ -30,5 +30,5 @@ return [
             'useFileTransport' => true,
         ],
     ],
-    'params'     => $params
+    'params'     => $params,
 ];

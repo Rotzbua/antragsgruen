@@ -38,7 +38,7 @@ class LineSplitTest extends TestBase
         $expect = [
             "Geschäftsordnung der Bundesversammlung geregelt. Antragsberechtigt sind die ",
             "Orts- und Kreisverbände, die Landesversammlungen bzw. ",
-            "Landesdelegiertenkonferenzen,"
+            "Landesdelegiertenkonferenzen,",
         ];
 
         $out = LineSplitter::splitHtmlToLines($orig, 80, '');
@@ -51,7 +51,7 @@ class LineSplitTest extends TestBase
             "Kinderbetreuung gründen – besser ist";
         $expect = [
             "gut und richtig, wenn Eltern selbst eine Initiative für Kinderbetreuung gründen ",
-            "– besser ist"
+            "– besser ist",
         ];
 
         $out = LineSplitter::splitHtmlToLines($orig, 80, '');
@@ -66,7 +66,7 @@ class LineSplitTest extends TestBase
         $expect = [
             "angehen, ist von großem Wert für unser Land. Veränderung kann nur gelingen, wenn ",
             "sie von Vielen getragen wird. Aber Veränderung braucht auch die Politik. Es ist ",
-            "gut und richtig,"
+            "gut und richtig,",
         ];
 
         $out = LineSplitter::splitHtmlToLines($orig, 80, '');
@@ -79,7 +79,7 @@ class LineSplitTest extends TestBase
             "kann nur gelingen, wenn sie von Vielen ";
         $expect = [
             "angehen, ist von großem Wert für unser Land. Veränderung kann nur gelingen, wenn ",
-            "sie von Vielen "
+            "sie von Vielen ",
         ];
 
         $out = LineSplitter::splitHtmlToLines($orig, 80, '');
@@ -94,7 +94,7 @@ class LineSplitTest extends TestBase
             "1angehen, ist von<br>",
             "großem Wert für<br>\n",
             "unser Land. Veränderung kann nur gelingen, wenn sie von Vielen sdfsdf sdfsdsdf ",
-            "dfdfs sf d"
+            "dfdfs sf d",
         ];
 
         $out = LineSplitter::splitHtmlToLines($orig, 80, '');
@@ -120,7 +120,7 @@ class LineSplitTest extends TestBase
         $expect = [
             '<p>nationalen Parlamente sowie die Rückkehr zur Gemeinschaftsmethode und eine EU-Kommissarin ',
             'oder einen EU-Kommissar; er oder sie soll der Eurogruppe vorsitzen und mit allen WWU-',
-            'relevanten Kompetenzen ausgestattet sein.</p>'
+            'relevanten Kompetenzen ausgestattet sein.</p>',
         ];
         $out    = LineSplitter::splitHtmlToLines($orig, 92, '');
         $this->assertSame($expect, $out);
@@ -132,7 +132,7 @@ class LineSplitTest extends TestBase
         $expect = [
             '<p>###LINENUMBER###nationalen Parlamente sowie die Rückkehr zur Gemeinschaftsmethode und eine EU-Kommissarin ',
             '###LINENUMBER###oder einen EU-Kommissar; er oder sie soll der Eurogruppe vorsitzen und mit allen WWU-',
-            '###LINENUMBER###relevanten Kompetenzen ausgestattet sein.</p>'
+            '###LINENUMBER###relevanten Kompetenzen ausgestattet sein.</p>',
         ];
         $out    = LineSplitter::splitHtmlToLines($orig, 92, '###LINENUMBER###');
         $this->assertSame($expect, $out);
@@ -159,7 +159,7 @@ class LineSplitTest extends TestBase
             '###LINENUMBER###4234 5234 6234 7234 8234 9234 0234 1234 2234 3234 4234 5234 6234 ',
             '###LINENUMBER###7234 8234 9234 0234</li></ul></li>',
             '<li>###LINENUMBER###1234 2234 3234 4234 5234 6234 7234 8234 9234 0234 1234 2234 3234 4234 5234 ',
-            '###LINENUMBER###6234 7234 8234 9234 0234 1234 2234 3234 4234 5234 6234 7234 8234 9234 0234</li></ul>'
+            '###LINENUMBER###6234 7234 8234 9234 0234 1234 2234 3234 4234 5234 6234 7234 8234 9234 0234</li></ul>',
         ];
         $out    = LineSplitter::splitHtmlToLines($orig, 80, '###LINENUMBER###');
         $this->assertSame($expect, $out);

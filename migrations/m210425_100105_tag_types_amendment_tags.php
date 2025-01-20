@@ -16,7 +16,7 @@ class m210425_100105_tag_types_amendment_tags extends Migration
 
         $this->createTable('amendmentTag', [
             'amendmentId' => 'INTEGER NOT NULL',
-            'tagId' => 'INTEGER NOT NULL'
+            'tagId' => 'INTEGER NOT NULL',
         ]);
         $this->addPrimaryKey('amendment_tag_pk', 'amendmentTag', ['amendmentId', 'tagId']);
         $this->createIndex('amendment_tag_fk_tagIdx', 'amendmentTag', 'tagId');

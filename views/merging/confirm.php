@@ -32,7 +32,7 @@ $this->title = $title . ': ' . $newMotion->getTitleWithPrefix();
 echo Html::beginForm('', 'post', [
     'id'                       => 'motionConfirmForm',
     'class'                    => 'motionMergeConfirmForm',
-    'data-antragsgruen-widget' => 'frontend/MotionMergeAmendmentsConfirm'
+    'data-antragsgruen-widget' => 'frontend/MotionMergeAmendmentsConfirm',
 ]);
 
 $odtText = '<span class="glyphicon glyphicon-download" aria-hidden="true"></span> ' . Yii::t('amend', 'merge_confirm_odt');

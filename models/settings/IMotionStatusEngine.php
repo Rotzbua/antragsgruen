@@ -310,7 +310,7 @@ class IMotionStatusEngine
     {
         return [
             IMotion::STATUS_SUBMITTED_UNSCREENED,
-            IMotion::STATUS_SUBMITTED_UNSCREENED_CHECKED
+            IMotion::STATUS_SUBMITTED_UNSCREENED_CHECKED,
         ];
     }
 

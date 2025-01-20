@@ -84,7 +84,7 @@ class DiffRendererTest extends TestBase
     public function testSplitText(): void
     {
         $renderer = new DiffRenderer();
-        list($nodes, $inIns, $inDel) = $renderer->textToNodes(
+        [$nodes, $inIns, $inDel] = $renderer->textToNodes(
             'Test1###INS_START###Inserted###INS_END###Bla###INS_START###Inserted###INS_END###Bla###DEL_START###Deleted###DEL_END###Ende',
             null,
             null,
@@ -101,7 +101,7 @@ class DiffRendererTest extends TestBase
         $this->assertNull($inDel);
 
         $renderer = new DiffRenderer();
-        list($nodes, $inIns, $inDel) = $renderer->textToNodes(
+        [$nodes, $inIns, $inDel] = $renderer->textToNodes(
             'Test1###INS_START###Inserted###INS_END###Bla###INS_START###Inserted###INS_END###Bla###DEL_START###Deleted',
             '',
             null,

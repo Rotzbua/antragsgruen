@@ -238,7 +238,7 @@ class UrlHelper
             '/motion/view',
             'motionSlug' => $motionComment->getIMotion()->getMotionSlug(),
             'commentId'  => $motionComment->id,
-            '#'          => 'comm' . $motionComment->id
+            '#'          => 'comm' . $motionComment->id,
         ];
         return self::createUrl($params, $motionComment->getIMotion()->getMyConsultation());
     }
@@ -251,7 +251,7 @@ class UrlHelper
         $params = array_merge([
             '/amendment/' . $mode,
             'motionSlug'  => $amendment->getMyMotion()->getMotionSlug(),
-            'amendmentId' => $amendment->id
+            'amendmentId' => $amendment->id,
         ], $addParams);
         return self::createUrl($params, $amendment->getMyConsultation());
     }
@@ -263,7 +263,7 @@ class UrlHelper
             'motionSlug'  => $amendmentComment->getIMotion()->getMyMotion()->getMotionSlug(),
             'amendmentId' => $amendmentComment->amendmentId,
             'commentId'   => $amendmentComment->id,
-            '#'           => 'comm' . $amendmentComment->id
+            '#'           => 'comm' . $amendmentComment->id,
         ];
         return self::createUrl($params, $amendmentComment->getIMotion()->getMyConsultation());
     }

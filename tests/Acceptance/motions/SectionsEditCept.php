@@ -17,7 +17,7 @@ $ret = $motionTypePage->getCurrentOrder();
 if (json_encode($ret)!=='["1","2","4","3","5"]') {
     $I->fail('Got invalid return from JavaScript (1): ' .  json_encode($ret));
 }
-$motionTypePage->setCurrentOrder(array(3, 2, 1, 4, 5));
+$motionTypePage->setCurrentOrder([3, 2, 1, 4, 5]);
 $ret = $motionTypePage->getCurrentOrder();
 if (json_encode($ret)!=='["3","2","1","4","5"]') {
     $I->fail('Got invalid return from JavaScript (2): ' .  json_encode($ret));

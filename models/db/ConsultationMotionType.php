@@ -362,7 +362,7 @@ class ConsultationMotionType extends ActiveRecord implements IHasPolicies
             [['motionPrefix', 'position', 'amendmentsOnly', 'supportTypeMotions', 'supportTypeAmendments'], 'safe'],
             [['pdfLayout', 'policyMotions', 'policyAmendments', 'policyComments', 'policySupportMotions'], 'safe'],
             [['policySupportAmendments', 'initiatorsCanMergeAmendments'], 'safe'],
-            [['sidebarCreateButton'], 'safe']
+            [['sidebarCreateButton'], 'safe'],
         ];
     }
 

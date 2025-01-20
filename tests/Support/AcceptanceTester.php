@@ -54,7 +54,7 @@ class AcceptanceTester extends Actor
     public const ACCEPTED_HTML_ERRORS = [
         'Bad value “popup” for attribute “rel”',
         'CKEDITOR',
-        'autocomplete'
+        'autocomplete',
     ];
 
     public function gotoConsultationHome(bool $check = true, string $subdomain = 'stdparteitag', string $path = 'std-parteitag'): ConsultationHomePage
@@ -102,7 +102,7 @@ class AcceptanceTester extends Actor
                 'subdomain'        => 'stdparteitag',
                 'consultationPath' => 'std-parteitag',
                 'motionSlug'       => $motionSlug,
-                'amendmentId'      => $amendmentId
+                'amendmentId'      => $amendmentId,
             ]
         );
         if ($check) {

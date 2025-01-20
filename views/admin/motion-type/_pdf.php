@@ -32,11 +32,11 @@ $supportSett = $motionType->getMotionSupportTypeClass()->getSettingsObj();
             <input type="hidden" name="amendmentInitiatorSettingFields[]" value="hasOrganizations">
             <?php
             echo HTMLTools::labeledCheckbox(
-                'type[showProposalsInExports]',
-                Yii::t('admin', 'motion_type_export_pp'),
-                $motionType->getSettingsObj()->showProposalsInExports,
-                'typeShowProposalsInExports'
-            );
+    'type[showProposalsInExports]',
+    Yii::t('admin', 'motion_type_export_pp'),
+    $motionType->getSettingsObj()->showProposalsInExports,
+    'typeShowProposalsInExports'
+);
             ?>
         </div>
     </div>

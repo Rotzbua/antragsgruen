@@ -65,8 +65,8 @@ $sameInitiatorSettingsForAmendments = (json_encode($motionSettings) === json_enc
                 </label>
                 <label class="initiatorSetPermissions">
                     <?php
-                    $isPermSet = (!is_a($motionSettings->getInitiatorPersonPolicy($motionType->getConsultation()),  \app\models\policies\All::class) ||
-                                  !is_a($motionSettings->getInitiatorOrganizationPolicy($motionType->getConsultation()),  \app\models\policies\All::class));
+                    $isPermSet = (!is_a($motionSettings->getInitiatorPersonPolicy($motionType->getConsultation()), \app\models\policies\All::class) ||
+                                  !is_a($motionSettings->getInitiatorOrganizationPolicy($motionType->getConsultation()), \app\models\policies\All::class));
                     echo Html::checkbox('type[initiatorSetPermissions]', $isPermSet, ['class' => 'hidden']);
                     ?>
                     <span class="btn btn-link">
@@ -366,8 +366,8 @@ $sameInitiatorSettingsForAmendments = (json_encode($motionSettings) === json_enc
                 </label>
                 <label class="initiatorSetPermissions">
                     <?php
-                    $isPermSet = (!is_a($amendmentSettings->getInitiatorPersonPolicy($motionType->getConsultation()),  \app\models\policies\All::class) ||
-                                  !is_a($amendmentSettings->getInitiatorOrganizationPolicy($motionType->getConsultation()),  \app\models\policies\All::class));
+                    $isPermSet = (!is_a($amendmentSettings->getInitiatorPersonPolicy($motionType->getConsultation()), \app\models\policies\All::class) ||
+                                  !is_a($amendmentSettings->getInitiatorOrganizationPolicy($motionType->getConsultation()), \app\models\policies\All::class));
                     echo Html::checkbox('type[amendmentInitiatorSetPermissions]', $isPermSet, ['class' => 'hidden']);
                     ?>
                     <span class="btn btn-link">

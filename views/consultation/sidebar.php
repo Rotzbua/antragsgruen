@@ -220,7 +220,7 @@ if ($hasComments) {
 
 if ($hasPDF) {
     $cache = \app\views\consultation\LayoutHelper::getSidebarPdfCache($consultation);
-    list($menusStd, $menusSmall) = $cache->getCached(function () use ($consultation, $hasAmendments) {
+    [$menusStd, $menusSmall] = $cache->getCached(function () use ($consultation, $hasAmendments) {
         $menusStd = [];
         $menusSmall = [];
 

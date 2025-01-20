@@ -223,7 +223,7 @@ foreach ($proposedAgenda as $proposedItem) {
             'fo:wrap-option' => 'no-wrap',
             'fo:font-family' => 'PT Sans',
             'fo:font-size'   => '10pt',
-            'fo:font-weight' => '900'
+            'fo:font-weight' => '900',
         ];
         $title  = $proposedItem->title . ': ' . $votingBlock->title;
         $doc->setCellStyle($row, $COL_PREFIX, null, $styles);

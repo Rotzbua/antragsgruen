@@ -218,7 +218,7 @@ class AmendmentController extends Base
         $amendment = Amendment::findOne(
             [
                 'id'       => $amendmentId,
-                'motionId' => $motion->id
+                'motionId' => $motion->id,
             ]
         );
         if (!$amendment) {
@@ -237,7 +237,7 @@ class AmendmentController extends Base
             [
                 'id'       => $amendmentId,
                 'motionId' => $motion->id,
-                'status'   => Amendment::STATUS_DRAFT
+                'status'   => Amendment::STATUS_DRAFT,
             ]
         );
         if (!$amendment) {

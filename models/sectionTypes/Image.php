@@ -37,7 +37,7 @@ class Image extends ISectionType
         $params = [
             '/motion/viewimage',
             'motionSlug' => $section->getMotion()->getMotionSlug(),
-            'sectionId'  => $section->sectionId
+            'sectionId'  => $section->sectionId,
         ];
         if ($showAlways) {
             $params['showAlways'] = $section->getShowAlwaysToken();
@@ -216,7 +216,7 @@ class Image extends ISectionType
             'width'    => $imagedata[0],
             'height'   => $imagedata[1],
             'filesize' => strlen($optimized),
-            'mime'     => $mime
+            'mime'     => $mime,
         ];
         $this->section->setData($optimized);
         $this->section->metadata = json_encode($metadata, JSON_THROW_ON_ERROR);

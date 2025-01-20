@@ -122,7 +122,7 @@ class Diff
                 if (count($currentSpool) > 0) {
                     $return[] = [
                         implode($groupBy, $currentSpool),
-                        $preOp
+                        $preOp,
                     ];
                 }
                 $preOp        = $operation[1];
@@ -135,7 +135,7 @@ class Diff
         if (count($currentSpool) > 0) {
             $return[] = [
                 implode($groupBy, $currentSpool),
-                $preOp
+                $preOp,
             ];
         }
 
@@ -352,7 +352,7 @@ class Diff
         }
 
         $split = $this->getUnchangedPrefixPostfix($lineOld, $lineNew, $combined);
-        list($prefix, $middleOrig, $middleNew, $middleDiff, $postfix) = $split;
+        [$prefix, $middleOrig, $middleNew, $middleDiff, $postfix] = $split;
 
         $middleLen  = grapheme_strlen(str_replace('###LINENUMBER###', '', $middleOrig));
         $breaksList = (grapheme_stripos($middleDiff, '</li>') !== false);
@@ -546,7 +546,7 @@ class Diff
             $renderer = new DiffRenderer();
             $renderer->setFormatting($diffFormatting);
 
-            list($adjustedRef, $adjustedMatching) = $matcher->matchForDiff($referenceParas, $newParas);
+            [$adjustedRef, $adjustedMatching] = $matcher->matchForDiff($referenceParas, $newParas);
             if (count($adjustedRef) !== count($adjustedMatching)) {
                 throw new Internal('compareSectionedHtml: number of sections does not match');
             }
@@ -709,7 +709,7 @@ class Diff
     {
         $matcher = new ArrayMatcher();
         $matcher->addIgnoredString('###LINENUMBER###');
-        list($adjustedRef, $adjustedMatching) = $matcher->matchForDiff($referenceParas, $newParas);
+        [$adjustedRef, $adjustedMatching] = $matcher->matchForDiff($referenceParas, $newParas);
         if (count($adjustedRef) !== count($adjustedMatching)) {
             throw new Internal('compareSectionedHtml: number of sections does not match');
         }

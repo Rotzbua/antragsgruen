@@ -153,7 +153,7 @@ class HashedStaticCache
         if ($this->isBulky && AntragsgruenApp::getInstance()->viewCacheFilePath) {
             $directory = self::getDirectory($this->cacheKey);
             if (!file_exists($directory)) {
-                mkdir($directory, 0700);
+                mkdir($directory, 0o700);
             }
 
             file_put_contents($directory . '/' . $this->cacheKey, $data);

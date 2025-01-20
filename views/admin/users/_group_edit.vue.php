@@ -268,7 +268,7 @@ ob_start();
             <footer class="modal-footer">
                 <a class="changeLogLink" :href="groupLogUrl" v-if="group">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <?= Yii::t('admin','siteacc_usergroup_log') ?>
+                    <?= Yii::t('admin', 'siteacc_usergroup_log') ?>
                 </a>
 
                 <button type="button" class="btn btn-default btnCancel" data-dismiss="modal">

@@ -158,7 +158,7 @@ class HTML2TexTest extends TestBase
             '<li value="g">###LINENUMBER###Test c</li>',
             '<li value="i/">###LINENUMBER###Test d</li>',
             '<li>###LINENUMBER###Test d</li></ol></li>',
-            '<li>Test 5</li></ol>'
+            '<li>Test 5</li></ol>',
         ];
         $expect = '\begin{enumerate}
 \item[4.] Test 2

@@ -293,7 +293,7 @@ class Tools
 
     public static function debugTime(string $name): void
     {
-        list($usec, $sec) = explode(' ', microtime());
+        [$usec, $sec] = explode(' ', microtime());
         $time = sprintf('%14.0f', intval($sec) * 10000 + floatval($usec) * 10000);
         if (self::$last_time) {
             echo 'Time (' . $name . '): ' . ($time - self::$last_time) . ' (' . date('Y-m-d H:i:s') . ')<br>';

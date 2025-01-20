@@ -330,7 +330,7 @@ class PagesController extends Base
             return new JsonResponse([
                 'uploaded' => 0,
                 'error'    => [
-                    'message' => $e->getMessage()
+                    'message' => $e->getMessage(),
                 ],
             ]);
         }

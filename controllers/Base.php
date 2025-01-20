@@ -267,7 +267,7 @@ class Base extends Controller
      * @param array $params
      * @return string
      */
-    public function render($view, $params = array())
+    public function render($view, $params = [])
     {
         $params = array_merge(
             [
@@ -599,7 +599,7 @@ class Base extends Controller
     {
         $motion = Motion::findOne([
             'consultationId' => $this->consultation->id,
-            'titlePrefix'    => $prefix
+            'titlePrefix'    => $prefix,
         ]);
         if ($motion && $motion->isReadable()) {
             return $motion->getLink();
@@ -624,12 +624,12 @@ class Base extends Controller
             $motion = Motion::findOne([
                 'consultationId' => $this->consultation->id,
                 'id'             => $motionSlug,
-                'slug'           => null
+                'slug'           => null,
             ]);
         } else {
             $motion = Motion::findOne([
                 'consultationId' => $this->consultation->id,
-                'slug'           => $motionSlug
+                'slug'           => $motionSlug,
             ]);
         }
         /** @var Motion|null $motion */

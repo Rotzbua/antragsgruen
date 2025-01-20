@@ -56,7 +56,7 @@ trait MotionMergingTrait
             'success' => true,
             'html'    => $this->renderPartial('@app/views/merging/_public_version_content', [
                 'motion' => $motion,
-                'draft'  => $draft
+                'draft'  => $draft,
             ]),
             'date'    => ($draft->draftMotion->getDateTime() ? $draft->draftMotion->getDateTime()->format('c') : ''),
         ]);
@@ -368,7 +368,8 @@ trait MotionMergingTrait
         if ($resumeDraft && !$this->getHttpRequest()->post('discard', 0) && count($resumeDraft->sections) === 1) {
             $form = Init::initFromDraft($motion, $resumeDraft);
         } else {
-            $form = Init::fromInitForm($motion,
+            $form = Init::fromInitForm(
+                $motion,
                 $this->getHttpRequest()->post('amendments', []),
                 $this->getHttpRequest()->post('textVersion', [])
             );

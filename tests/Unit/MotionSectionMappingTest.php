@@ -17,7 +17,7 @@ class MotionSectionMappingTest extends DBTestBase
         $fromType = self::createDummyMotionType([
             self::createDummySection(1000, ISectionType::TYPE_TITLE, 'Title', true, true),
             self::createDummySection(1001, ISectionType::TYPE_TEXT_SIMPLE, 'Text', true, true),
-            self::createDummySection(1002, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false)
+            self::createDummySection(1002, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false),
         ]);
 
         $mapping = MotionDeepCopy::getMotionSectionMapping($fromType, $fromType, []);
@@ -33,13 +33,13 @@ class MotionSectionMappingTest extends DBTestBase
         $fromType = self::createDummyMotionType([
             self::createDummySection(1000, ISectionType::TYPE_TITLE, 'Title', true, true),
             self::createDummySection(1001, ISectionType::TYPE_TEXT_SIMPLE, 'Text', true, true),
-            self::createDummySection(1002, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false)
+            self::createDummySection(1002, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false),
         ]);
 
         $toType = self::createDummyMotionType([
             self::createDummySection(1003, ISectionType::TYPE_TITLE, 'Title', true, true),
             self::createDummySection(1004, ISectionType::TYPE_TEXT_SIMPLE, 'Text', true, true),
-            self::createDummySection(1005, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false)
+            self::createDummySection(1005, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false),
         ]);
 
         $mapping = MotionDeepCopy::getMotionSectionMapping($fromType, $toType, []);
@@ -55,13 +55,13 @@ class MotionSectionMappingTest extends DBTestBase
         $fromType = self::createDummyMotionType([
             self::createDummySection(1000, ISectionType::TYPE_TITLE, 'Title', true, true),
             self::createDummySection(1001, ISectionType::TYPE_TEXT_SIMPLE, 'Text', true, true),
-            self::createDummySection(1002, ISectionType::TYPE_IMAGE, 'Image', false, false)
+            self::createDummySection(1002, ISectionType::TYPE_IMAGE, 'Image', false, false),
         ]);
 
         $toType = self::createDummyMotionType([
             self::createDummySection(1003, ISectionType::TYPE_TITLE, 'Title', true, true),
             self::createDummySection(1004, ISectionType::TYPE_TEXT_SIMPLE, 'Text', true, true),
-            self::createDummySection(1005, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false)
+            self::createDummySection(1005, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false),
         ]);
 
         $mapping = MotionDeepCopy::getMotionSectionMapping($fromType, $toType, []);
@@ -95,13 +95,13 @@ class MotionSectionMappingTest extends DBTestBase
         $fromType = self::createDummyMotionType([
             self::createDummySection(1000, ISectionType::TYPE_TITLE, 'Title', true, true),
             self::createDummySection(1001, ISectionType::TYPE_TEXT_SIMPLE, 'Text', true, true),
-            self::createDummySection(1002, ISectionType::TYPE_IMAGE, 'Image', false, false)
+            self::createDummySection(1002, ISectionType::TYPE_IMAGE, 'Image', false, false),
         ]);
 
         $toType = self::createDummyMotionType([
             self::createDummySection(1003, ISectionType::TYPE_TITLE, 'Title', true, true),
             self::createDummySection(1004, ISectionType::TYPE_TEXT_SIMPLE, 'Text', true, true),
-            self::createDummySection(1005, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false)
+            self::createDummySection(1005, ISectionType::TYPE_TEXT_SIMPLE, 'Reason', false, false),
         ]);
 
         $mapping = MotionDeepCopy::getMotionSectionMapping($fromType, $toType, [MotionDeepCopy::SKIP_NON_AMENDABLE]);
@@ -116,13 +116,13 @@ class MotionSectionMappingTest extends DBTestBase
         $fromType = self::createDummyMotionType([
             self::createDummySection(1000, ISectionType::TYPE_TITLE, 'Title', true, true),
             self::createDummySection(1001, ISectionType::TYPE_TEXT_SIMPLE, 'Text', true, true),
-            self::createDummySection(1002, ISectionType::TYPE_TEXT_SIMPLE, 'Image', false, false)
+            self::createDummySection(1002, ISectionType::TYPE_TEXT_SIMPLE, 'Image', false, false),
         ]);
 
         $toType = self::createDummyMotionType([
             self::createDummySection(1003, ISectionType::TYPE_TITLE, 'Title', true, true),
             self::createDummySection(1004, ISectionType::TYPE_TEXT_SIMPLE, 'Resolution', true, true),
-            self::createDummySection(1005, ISectionType::TYPE_TEXT_EDITORIAL, 'Progress', false, false)
+            self::createDummySection(1005, ISectionType::TYPE_TEXT_EDITORIAL, 'Progress', false, false),
         ]);
 
         $mapping = MotionDeepCopy::getMotionSectionMapping($fromType, $toType, [MotionDeepCopy::SKIP_NON_AMENDABLE]);

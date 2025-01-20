@@ -20,11 +20,11 @@ use yii\helpers\Html;
                 <div class="form-group has-feedback">
                     <label class="name" for="siteTitle"><?= $t('sitedata_sitetitle') ?>:</label>
                     <?= Html::input(
-                        'text',
-                        'SiteCreateForm[title]',
-                        $model->title,
-                        ['id' => 'siteTitle', 'class' => 'form-control', 'required' => 'required']
-                    ); ?>
+    'text',
+    'SiteCreateForm[title]',
+    $model->title,
+    ['id' => 'siteTitle', 'class' => 'form-control', 'required' => 'required']
+); ?>
                     <span class="error glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                     <span class="success glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                 </div>
@@ -78,11 +78,11 @@ use yii\helpers\Html;
                     <div class="usernameRow">
                         <label for="userName">Your name:</label>
                         <?= Html::input(
-                            'text',
-                            'SiteCreateForm[user_name]',
-                            '',
-                            ['id' => 'userName', 'class' => 'form-control', 'required' => 'required']
-                        ); ?>
+                        'text',
+                        'SiteCreateForm[user_name]',
+                        '',
+                        ['id' => 'userName', 'class' => 'form-control', 'required' => 'required']
+                    ); ?>
                     </div>
                     <div class="usernameRow">
                         <label for="userEmail">Your e-mail-address / username:</label>

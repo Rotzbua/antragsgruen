@@ -84,10 +84,10 @@ if ($canSupportAsPerson && $canSupportAsOrganization) {
             <label class="radio-inline">
                 <?php
                 echo Html::radio(
-                    'Initiator[personType]',
-                    $initiator->personType === ISupporter::PERSON_NATURAL || $initiator->personType === null,
-                    ['value' => ISupporter::PERSON_NATURAL, 'id' => 'personTypeNatural']
-                );
+        'Initiator[personType]',
+        $initiator->personType === ISupporter::PERSON_NATURAL || $initiator->personType === null,
+        ['value' => ISupporter::PERSON_NATURAL, 'id' => 'personTypeNatural']
+    );
                 ?>
                 <?= Yii::t('initiator', 'personNatural') ?>
             </label>

@@ -84,7 +84,7 @@ abstract class IPDFLayout
                 } else {
                     $preview = null;
                 }
-                $return[] = new PdfLayoutDescription(null, PdfLayoutDescription::RENDERER_LATEX, $layout->id,  $layout->title, $preview, null);
+                $return[] = new PdfLayoutDescription(null, PdfLayoutDescription::RENDERER_LATEX, $layout->id, $layout->title, $preview, null);
             }
         }
 

@@ -219,7 +219,7 @@ abstract class TextSimpleCommon extends Text {
 
         $cacheDeps = [
             $firstLine, $lineLength, $section->getOriginalMotionSection()->getData(), $section->data,
-            $section->getAmendment()->globalAlternative
+            $section->getAmendment()->globalAlternative,
         ];
         $cache = HashedStaticCache::getInstance('printAmendmentTeX', $cacheDeps);
         $tex = $cache->getCached(function () use ($section, $firstLine, $lineLength) {

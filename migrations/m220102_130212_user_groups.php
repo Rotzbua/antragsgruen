@@ -27,7 +27,7 @@ class m220102_130212_user_groups extends Migration
 
         $this->createTable('userGroup', [
             'userId' => 'INTEGER NOT NULL',
-            'groupId' => 'INTEGER NOT NULL'
+            'groupId' => 'INTEGER NOT NULL',
         ]);
         $this->addPrimaryKey('usergroup_pk', 'userGroup', ['userId', 'groupId']);
         $this->createIndex('usergroup_group_ix', 'userGroup', 'groupId');

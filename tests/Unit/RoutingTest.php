@@ -49,7 +49,7 @@ class RoutingTest extends TestBase
             [
                 'subdomain' => 'stdparteitag',
                 'consultationPath' => 'std-parteitag',
-            ]
+            ],
         ], $resolvedRoute);
     }
 
@@ -62,7 +62,7 @@ class RoutingTest extends TestBase
                 'subdomain' => 'stdparteitag',
                 'consultationPath' => 'std-parteitag',
                 'motionSlug' => 'Testing_proposed_changes-630',
-            ]
+            ],
         ], $resolvedRoute);
     }
 
@@ -75,7 +75,7 @@ class RoutingTest extends TestBase
                 'subdomain' => 'stdparteitag',
                 'consultationPath' => 'std-parteitag',
                 'motionSlug' => '630',
-            ]
+            ],
         ], $resolvedRoute);
     }
 
@@ -89,7 +89,7 @@ class RoutingTest extends TestBase
                 'consultationPath' => 'std-parteitag',
                 'motionSlug' => 'Testing_proposed_changes-630',
                 'amendmentId' => '12345',
-            ]
+            ],
         ], $resolvedRoute);
     }
 
@@ -100,7 +100,7 @@ class RoutingTest extends TestBase
             'consultation/rest-site',
             [
                 'subdomain' => 'stdparteitag',
-            ]
+            ],
         ], $resolvedRoute);
     }
 
@@ -112,7 +112,7 @@ class RoutingTest extends TestBase
             [
                 'subdomain' => 'stdparteitag',
                 'consultationPath' => 'std-parteitag',
-            ]
+            ],
         ], $resolvedRoute);
     }
 
@@ -124,7 +124,7 @@ class RoutingTest extends TestBase
             [
                 'subdomain' => 'stdparteitag',
                 'consultationPath' => 'std-parteitag-2010',
-            ]
+            ],
         ], $resolvedRoute);
     }
 
@@ -137,7 +137,7 @@ class RoutingTest extends TestBase
                 'subdomain' => 'stdparteitag',
                 'consultationPath' => 'std-parteitag',
                 'motionSlug' => '630',
-            ]
+            ],
         ], $resolvedRoute);
     }
 
@@ -151,7 +151,7 @@ class RoutingTest extends TestBase
                 'consultationPath' => 'std-parteitag',
                 'motionSlug' => 'Testing_proposed_changes-630',
                 'amendmentId' => '12345',
-            ]
+            ],
         ], $resolvedRoute);
     }
 }

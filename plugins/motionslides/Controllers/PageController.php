@@ -56,7 +56,8 @@ class PageController extends Base
             $this->getHttpSession()->setFlash('success', 'Success.');
 
             $html = \Yii::$app->controller->renderPartial(
-                '@app/plugins/motionslides/views/imotion-page', ['imotions' => $imotions]
+                '@app/plugins/motionslides/views/imotion-page',
+                ['imotions' => $imotions]
             );
 
             $page->text = $html;

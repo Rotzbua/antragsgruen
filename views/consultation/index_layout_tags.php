@@ -28,7 +28,7 @@ if ($consultation->getSettings()->homepageByTag && !isset($selectedTag)) {
 
     $list = '';
     foreach ($consultation->getSortedTags(ConsultationSettingsTag::TYPE_PUBLIC_TOPIC) as $tag) {
-        list($imotions, $resolutions) = MotionSorter::getIMotionsAndResolutions($consultation->getMotionsOfTag($tag));
+        [$imotions, $resolutions] = MotionSorter::getIMotionsAndResolutions($consultation->getMotionsOfTag($tag));
         if ($isResolutionList) {
             $toShowImotions = $resolutions;
         } else {

@@ -204,7 +204,7 @@ class IPdfWriter extends Fpdi
             'A',
             'upper-alpha',
             'upper-latin',
-            'lower-greek'
+            'lower-greek',
         ];
         $valid_symbols = array_merge($valid_symbols, HTMLTools::KNOWN_OL_CLASSES);
         if (in_array($symbol, $valid_symbols)) {

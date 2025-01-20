@@ -357,14 +357,14 @@ $voting = $amendment->getVotingData();
         <h3><?= Yii::t('amend', 'proposal_public_expl_title') ?></h3>
         <?php
         echo Html::textarea(
-            'proposalExplanation',
-            $amendment->proposalExplanation ?: '',
-            [
+                'proposalExplanation',
+                $amendment->proposalExplanation ?: '',
+                [
                 'title' => Yii::t('amend', 'proposal_public_expl_title'),
                 'class' => 'form-control',
                 'disabled' => $limitedDisabled,
             ]
-        );
+            );
         ?>
     </section>
     <section class="collisions <?= (count($collidingAmendments) === 0 ? 'hidden' : '') ?>">
@@ -445,10 +445,10 @@ if ($context !== 'edit' && $canBeChangedUnlimitedly) {
         <h3><?= Yii::t('amend', 'proposal_modified_accepted') ?></h3>
         <?php
         echo Html::a(
-            Yii::t('base', 'edit'),
-            UrlHelper::createAmendmentUrl($amendment, 'edit-proposed-change'),
-            ['class' => 'editModification']
-        );
+        Yii::t('base', 'edit'),
+        UrlHelper::createAmendmentUrl($amendment, 'edit-proposed-change'),
+        ['class' => 'editModification']
+    );
         ?>
     </section>
     <?php

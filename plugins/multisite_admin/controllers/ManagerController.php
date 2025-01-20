@@ -85,7 +85,7 @@ class ManagerController extends Base
 
         return new HtmlResponse($this->render('createsite', [
             'model'  => $model,
-            'errors' => $errors
+            'errors' => $errors,
         ]));
     }
 

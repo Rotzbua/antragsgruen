@@ -176,7 +176,7 @@ class AntragsgruenApp implements \JsonSerializable
     {
         $dir = \Yii::$app->runtimePath . '/tmp';
         if (!file_exists($dir)) {
-            mkdir($dir, 0700);
+            mkdir($dir, 0o700);
         }
         return $dir . '/';
     }

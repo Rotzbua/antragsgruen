@@ -230,7 +230,7 @@ if (count($consultation->agendaItems) > 0) {
             echo Html::textInput('motion[titlePrefix]', $motion->titlePrefix, [
                 'class'       => 'form-control',
                 'id'          => 'motionTitlePrefix',
-                'placeholder' => Yii::t('admin', 'motion_prefix_hint')
+                'placeholder' => Yii::t('admin', 'motion_prefix_hint'),
             ]);
             ?>
         </div>

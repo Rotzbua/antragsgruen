@@ -41,7 +41,7 @@ class Update
     {
         $dir = $this->getBasePath() . 'runtime/updates/';
         if (!file_exists($dir)) {
-            mkdir($dir, 0755);
+            mkdir($dir, 0o755);
         }
         $base = explode('/', $this->url);
         return $dir . $base[count($base) - 1];
@@ -54,7 +54,7 @@ class Update
     {
         $dir = $this->getBasePath() . 'runtime/backups/' . $version . '/';
         if (!file_exists($dir)) {
-            if (!mkdir($dir, 0755, true)) {
+            if (!mkdir($dir, 0o755, true)) {
                 throw new \Exception('Could not create backup directory');
             }
         }
@@ -156,7 +156,7 @@ class Update
         $files    = array_merge(array_keys($filesObj->files_updated), $filesObj->files_deleted);
         foreach ($files as $file) {
             $fulldir = $basepath . (dirname($file) === '.' ? '' : dirname($file));
-            if (!file_exists($fulldir) && !mkdir($fulldir, 0755, true)) {
+            if (!file_exists($fulldir) && !mkdir($fulldir, 0o755, true)) {
                 throw new \Exception('Could not create backup sub-directory: ' .
                     htmlentities($fulldir, ENT_COMPAT, 'UTF-8'));
             }
@@ -298,7 +298,7 @@ class Update
             return;
         }
         $this->createDirectoriesRecursively(dirname($dir));
-        mkdir($this->getBasePath() . $dir, 0755);
+        mkdir($this->getBasePath() . $dir, 0o755);
     }
 
     /**

@@ -17,7 +17,7 @@ class DBJR extends IPDFLayout
         $pdf->AddPage();
 
         $pdf->setDestination('motion' . $motion->id, 0, '');
-        $pdf->Bookmark($motion->getTitleWithPrefix(), 0, 0, '', 'BI', array(128,0,0), -1, '#motion' . $motion->id);
+        $pdf->Bookmark($motion->getTitleWithPrefix(), 0, 0, '', 'BI', [128,0,0], -1, '#motion' . $motion->id);
 
         $left     = 23.5;
         $abs      = 5;

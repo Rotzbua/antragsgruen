@@ -93,11 +93,11 @@ $textOpts = ['required' => 'required', 'class' => 'form-control'];
         <label for="newTitle" class="leftColumn control-label"><?= Yii::t('admin', 'cons_create_title') ?>:</label>
         <div class="rightColumn"><?php
             echo Html::input(
-                'text',
-                'newConsultation[title]',
-                $createForm->title,
-                array_merge($textOpts, ['id' => 'newTitle'])
-            ); ?>
+    'text',
+    'newConsultation[title]',
+    $createForm->title,
+    array_merge($textOpts, ['id' => 'newTitle'])
+); ?>
         </div>
     </div>
 
@@ -125,7 +125,7 @@ $textOpts = ['required' => 'required', 'class' => 'form-control'];
             );
             $routeParams = [
                 'consultation/index',
-                'consultationPath' => '--CON--'
+                'consultationPath' => '--CON--',
             ];
             if ($controller->getParams()->multisiteMode) {
                 $routeParams['subdomain'] = $site->subdomain;
@@ -143,10 +143,10 @@ $textOpts = ['required' => 'required', 'class' => 'form-control'];
         <div class="rightColumn">
             <label><?php
                 echo Html::checkbox(
-                    'newConsultation[setStandard]',
-                    $createForm->setAsDefault,
-                    ['id' => 'newSetStandard']
-                ); ?>
+                'newConsultation[setStandard]',
+                $createForm->setAsDefault,
+                ['id' => 'newSetStandard']
+            ); ?>
                 <?= Yii::t('admin', 'cons_create_std_do') ?>
             </label>
         </div>
@@ -226,9 +226,9 @@ $textOpts = ['required' => 'required', 'class' => 'form-control'];
     </div>
     <div class="settingsTypeWizard siteCreate"><?php
         echo $this->render(
-            '../../createsiteWizard/index',
-            ['model' => $wizardModel, 'errors' => [], 'mode' => 'consultation']
-        );
+                '../../createsiteWizard/index',
+                ['model' => $wizardModel, 'errors' => [], 'mode' => 'consultation']
+            );
     ?></div>
 
 </div>

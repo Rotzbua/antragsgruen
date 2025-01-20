@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return  [
   'Initiator' => 'Antragsteller:in',
   'initiators_1' => 'Antragsteller:in',
   'initiators_x' => 'Antragsteller:innen',
@@ -87,4 +87,4 @@ Hinweis: wenn du den eben genannten Link weiterleitest, kann die empfangende Per
 
 Mit freundlichen Grüßen,
   Dein Landesvorstand',
-);
+];

@@ -80,8 +80,8 @@ function getFileHash(string $file): string
 
 function compareDirectories(string $dirOldBase, string $dirNewBase, string $dirRelative): void
 {
-    list($oldDirs, $oldFiles) = getDirContent($dirOldBase, $dirRelative);
-    list($newDirs, $newFiles) = getDirContent($dirNewBase, $dirRelative);
+    [$oldDirs, $oldFiles] = getDirContent($dirOldBase, $dirRelative);
+    [$newDirs, $newFiles] = getDirContent($dirNewBase, $dirRelative);
 
     // Search for changed files
     foreach ($oldFiles as $filename) {
@@ -216,7 +216,7 @@ $updateJson = json_encode([
         "url"       => "https://antragsgruen.de/updates/" . $updateFilename,
         "filesize"  => strlen($zipContent),
         "signature" => base64_encode(sodium_crypto_generichash($zipContent)),
-    ]
+    ],
 ], JSON_PRETTY_PRINT);
 echo "Template for the update definition:\n" . $updateJson . "\n";
 file_put_contents($dirUpdate . $updateDefFilename, $updateJson);

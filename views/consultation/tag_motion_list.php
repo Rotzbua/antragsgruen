@@ -43,7 +43,7 @@ echo $cache->getCached(function () use ($consultation, $layout, $tag, $isResolut
     $output .= '<select class="stdDropdown">';
 
     foreach ($consultation->getSortedTags(ConsultationSettingsTag::TYPE_PUBLIC_TOPIC) as $selectTag) {
-        list($imotions, $resolutions) = MotionSorter::getIMotionsAndResolutions($consultation->getMotionsOfTag($selectTag));
+        [$imotions, $resolutions] = MotionSorter::getIMotionsAndResolutions($consultation->getMotionsOfTag($selectTag));
         $toShowImotions = ($isResolutionList ? $resolutions : $imotions);
         $toShowImotions = array_values(array_filter($toShowImotions, function (IMotion $imotion) use ($invisibleStatuses): bool {
             return MotionSorter::imotionIsVisibleOnHomePage($imotion, $invisibleStatuses);
@@ -67,7 +67,7 @@ echo $cache->getCached(function () use ($consultation, $layout, $tag, $isResolut
     $output .= '</select>';
     $output .= '</div></div>';
 
-    list($imotions, $resolutions) = MotionSorter::getIMotionsAndResolutions($consultation->getMotionsOfTag($tag));
+    [$imotions, $resolutions] = MotionSorter::getIMotionsAndResolutions($consultation->getMotionsOfTag($tag));
 
     if (count($consultation->motionTypes) > 0 && $consultation->getSettings()->getStartLayoutView()) {
         $toShowImotions = ($isResolutionList ? $resolutions : $imotions);

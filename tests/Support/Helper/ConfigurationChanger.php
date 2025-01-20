@@ -16,7 +16,7 @@ class ConfigurationChanger extends Module
         'xdvipdfmx'             => null,
         'mailService'           => [
             'transport' => 'sendmail',
-        ]
+        ],
     ];
 
     /**

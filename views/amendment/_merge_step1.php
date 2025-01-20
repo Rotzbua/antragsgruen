@@ -40,11 +40,11 @@ use yii\helpers\Html;
             <div class="fueluxSelectHolder">
                 <?php
                 echo Html::dropDownList(
-                    'amendmentStatus',
-                    Amendment::STATUS_ACCEPTED,
-                    $amendment->getMyConsultation()->getStatuses()->getStatusNames(),
-                    ['id' => 'amendmentStatus', 'class' => 'stdDropdown']
-                );
+                'amendmentStatus',
+                Amendment::STATUS_ACCEPTED,
+                $amendment->getMyConsultation()->getStatuses()->getStatusNames(),
+                ['id' => 'amendmentStatus', 'class' => 'stdDropdown']
+            );
                 ?>
             </div>
         </div>

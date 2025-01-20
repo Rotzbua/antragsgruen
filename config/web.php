@@ -42,7 +42,7 @@ $common = require(__DIR__ . DIRECTORY_SEPARATOR . 'common.php');
 
 $cookieSettings = [
     'httpOnly' => true,
-    'sameSite' => PHP_VERSION_ID >= 70300 ? yii\web\Cookie::SAME_SITE_LAX : null
+    'sameSite' => PHP_VERSION_ID >= 70300 ? yii\web\Cookie::SAME_SITE_LAX : null,
 ];
 if ((isset($_SERVER['REQUEST_SCHEME']) && strtolower($_SERVER['REQUEST_SCHEME']) === 'https') || (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')) {
     $cookieSettings['secure'] = true;
@@ -78,7 +78,7 @@ $config = yii\helpers\ArrayHelper::merge(
 
                 'parsers' => [
                     'application/json' => 'yii\web\JsonParser',
-                ]
+                ],
             ],
             'assetManager'         => [
                 'appendTimestamp' => false,
@@ -92,7 +92,7 @@ if ($params->cookieDomain) {
             'httponly' => true,
             'domain'   => $params->cookieDomain,
             'sameSite' => PHP_VERSION_ID >= 70300 ? yii\web\Cookie::SAME_SITE_LAX : null,
-        ]
+        ],
     ];
 } elseif ($params->domainPlain) {
     $config['components']['session'] = [
@@ -100,7 +100,7 @@ if ($params->cookieDomain) {
             'httponly' => true,
             'domain'   => '.' . parse_url($params->domainPlain, PHP_URL_HOST),
             'sameSite' => PHP_VERSION_ID >= 70300 ? yii\web\Cookie::SAME_SITE_LAX : null,
-        ]
+        ],
     ];
 }
 

@@ -190,14 +190,14 @@ class TabularData extends ISectionType
         if ($preData === null || $preData == '') {
             $newData = [
                 'maxRowId' => 0,
-                'rows'     => []
+                'rows'     => [],
             ];
         } else {
             $preData = json_decode($preData, true);
             if (!$preData || !isset($preData['rows'])) {
                 $newData = [
                     'maxRowId' => 0,
-                    'rows'     => []
+                    'rows'     => [],
                 ];
             } else {
                 $newData         = $preData;

@@ -78,7 +78,7 @@ class AmendmentRewriterCheckTest extends TestBase
                 'text' => '<p>Test 4</p>',
                 'amendmentDiff' => '<p>Test <del>3</del><ins>4</ins></p>',
                 'motionNewDiff' => '<p>Test <del>3</del><ins>5</ins></p>',
-            ]
+            ],
         ], $colliding);
     }
 

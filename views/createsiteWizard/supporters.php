@@ -27,10 +27,10 @@ use yii\helpers\Html;
                 </span>
                 <span class="input">
                     <?= Html::radio(
-                        'SiteCreateForm[needsSupporters]',
-                        $model->needsSupporters,
-                        ['value' => 1, 'class' => 'needsSupporters']
-                    ); ?>
+    'SiteCreateForm[needsSupporters]',
+    $model->needsSupporters,
+    ['value' => 1, 'class' => 'needsSupporters']
+); ?>
                 </span>
             </label>
         </div>

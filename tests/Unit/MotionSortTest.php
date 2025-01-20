@@ -13,13 +13,13 @@ class MotionSortTest extends TestBase
             'A3',
             'A2neu',
             'A4',
-            'A10'
+            'A10',
         ];
         $expect = [
             'A2neu',
             'A3',
             'A4',
-            'A10'
+            'A10',
         ];
         $out    = MotionSorter::getSortedMotionsSortTest($orig);
         $this->assertSame($expect, $out);
@@ -37,7 +37,7 @@ class MotionSortTest extends TestBase
             'A2neu1',
             'A3',
             'A4neu2',
-            'A10 neub'
+            'A10 neub',
         ];
         $out    = MotionSorter::getSortedMotionsSortTest($orig);
         $this->assertSame($expect, $out);
