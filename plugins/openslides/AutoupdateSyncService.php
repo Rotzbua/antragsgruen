@@ -8,7 +8,6 @@ use app\components\Tools;
 use app\models\db\{ConsultationUserGroup, Site, User as InternalUser, User};
 use app\models\exceptions\Internal;
 use app\plugins\openslides\DTO\{AutoupdateUpdate, User as OSUser, Usergroup};
-use Doctrine\Common\Annotations\AnnotationReader;
 use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
