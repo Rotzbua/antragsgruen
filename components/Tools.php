@@ -8,7 +8,6 @@ use app\models\db\Consultation;
 use app\models\settings\Consultation as ConsultationSettings;
 use app\models\exceptions\Internal;
 use app\views\pdfLayouts\IPdfWriter;
-use Doctrine\Common\Annotations\AnnotationReader;
 use setasign\Fpdi\FpdiException;
 use setasign\Fpdi\PdfParser\StreamReader;
 use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
