@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: php-actions/composer@v6
         with:
           php_version: "8.1"
@@ -24,7 +24,7 @@ jobs:
         run: |
           php vendor/bin/phpstan analyse --configuration=phpstan.neon --error-format=github --generate-baseline
       - name: Upload baseline
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: phpstan-baseline.neon
           path: phpstan-baseline.neon
