@@ -16,7 +16,7 @@
         "lint:fix": "eslint --fix"
     },
     "engines": {
-        "node": ">=20"
+        "node": ">=22"
     },
     "devDependencies": {
         "@eslint/js": "^9.12.0",
