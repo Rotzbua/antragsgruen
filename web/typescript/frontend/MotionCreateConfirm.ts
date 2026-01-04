@@ -3,7 +3,7 @@ export class MotionCreateConfirm {
 
     constructor(private $widget: JQuery) {
         this.$selectors = this.$widget.find("input[name=viewMode]");
-        this.$selectors.change(this.onModeChanged.bind(this)).trigger("change");
+        this.$selectors.on('change', this.onModeChanged.bind(this)).trigger('change');
     }
 
     private onModeChanged() {
