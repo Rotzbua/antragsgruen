@@ -1,8 +1,17 @@
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import pluginPromise from 'eslint-plugin-promise'
+import pluginPromise from 'eslint-plugin-promise';
 import globals from 'globals';
 import ConfusingGlobals from 'confusing-browser-globals';
+import pluginNoQuery from 'eslint-plugin-no-jquery';
+import {fixupPluginRules} from '@eslint/compat';
+import path from 'node:path';
+import {fileURLToPath} from 'url';
+import {FlatCompat} from '@eslint/eslintrc';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const compat = new FlatCompat({baseDirectory: __dirname});
 
 const config = tseslint.config(
     {
@@ -16,6 +25,9 @@ const config = tseslint.config(
                 ...globals.browser,
                 ...globals.jquery,
             },
+        },
+        plugins: {
+            'no-jquery': fixupPluginRules(pluginNoQuery),
         },
         extends: [
             eslint.configs.recommended,
@@ -40,6 +52,8 @@ const config = tseslint.config(
             'promise/no-callback-in-promise': 'off',//todo
         },
     },
+    ...compat.extends('plugin:no-jquery/recommended'),
+    ...compat.extends('plugin:no-jquery/deprecated'),
 );
 
 export default config;
