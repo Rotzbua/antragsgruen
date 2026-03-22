@@ -6,10 +6,11 @@
 - Configuring Antragsgrün via environment variables is now supported, allowing for easier deployment in Docker- and Kubernetes-environments.
 - It is now easier possible to integrate OpenTelemetry into Antragsgrün.
 
-### Version 4.16.3 [not released yet]
+### Version 4.16.3 (2026-03-22)
 
 - Bugfix: If a draft of a motion was created before the submission deadline, that draft could be submitted after the deadline.
 - Bugfix: Deleting agenda items was not possible when a speaking list was attached to it.
+- The logging mechanism now integrates with OpenTelemetry if used.
 
 ### Version 4.16.2 (2026-01-10)
 
