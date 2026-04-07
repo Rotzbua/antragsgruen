@@ -6,6 +6,10 @@
 - Configuring Antragsgrün via environment variables is now supported, allowing for easier deployment in Docker- and Kubernetes-environments.
 - It is now easier possible to integrate OpenTelemetry into Antragsgrün.
 
+### Version 4.16.4 [not released yet]
+
+- Bugfix: Fixing a regression introduced in v4.16.3
+
 ### Version 4.16.3 (2026-03-22)
 
 - Bugfix: If a draft of a motion was created before the submission deadline, that draft could be submitted after the deadline.
