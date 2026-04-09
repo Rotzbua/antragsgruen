@@ -6,9 +6,9 @@
 - Configuring Antragsgrün via environment variables is now supported, allowing for easier deployment in Docker- and Kubernetes-environments.
 - It is now easier possible to integrate OpenTelemetry into Antragsgrün.
 
-### Version 4.16.4 [not released yet]
+### Version 4.16.4 (2026-04-10)
 
-- Bugfix: Fixing a regression introduced in v4.16.3
+- Bugfix: Fixing a regression introduced in v4.16.3 (preventing amendments from being submitted under certain conditions)
 
 ### Version 4.16.3 (2026-03-22)
 
